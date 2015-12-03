@@ -5,3 +5,6 @@ Homestead.json
 .env
 /build
 .DS_Store
+/bootstrap/compiled.php
+.env.*.php
+.env.php
