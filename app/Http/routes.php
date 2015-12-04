@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+# Homepage Routes
+
+Route::get('/', [
+    'uses' => '\Schoo\Http\Controllers\HomeController@index',
+    'as'   => 'index'
+]);

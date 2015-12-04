@@ -1,0 +1,44 @@
+.navbar .navbar-form .form-group .form-control, .navbar .navbar-form .form-control {
+    border-color: inherit;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    height: 28px;
+    font-size: 24px;
+    line-height: 1.42857143;
+}
+
+.footer {
+    padding:25px;
+    width: 100%;
+    min-height:200px;
+    background-color: #3f51b5;
+    color: gray;
+    font-size: 12px;
+    position: relative;
+    bottom: 0px;
+}
+
+.navbar {
+    position: overflow;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 40px;
+    line-height: 20px;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+

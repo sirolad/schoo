@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: Schoo
+        psr4_prefix: Schoo
         src_path: app
