@@ -30,8 +30,8 @@
         </div>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Log in </a></li>
-        <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Register</a></li>
+        <li><a href="/login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Log in </a></li>
+        <li><a href="/signup"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Register</a></li>
       </ul>
     </div>
   </div>
