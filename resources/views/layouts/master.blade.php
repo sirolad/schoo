@@ -12,6 +12,7 @@
   <!-- Bootstrap Material Design -->
   <link href="css/bootstrap-material-design.css" rel="stylesheet">
   <link href="css/ripples.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -27,6 +28,7 @@
 
 <script src="/js/ripples.min.js"></script>
 <script src="/js/material.min.js"></script>
+<script src="/js/sweetalert.min.js"></script>
 <script>
     $(document).ready(function() {
         // This command is used to initialize some elements and make them work properly

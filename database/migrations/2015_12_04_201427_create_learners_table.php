@@ -13,10 +13,13 @@ class CreateLearnersTable extends Migration
     public function up()
     {
         Schema::create('learners', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password', 60);
+            $table->increments('id')->unsigned();
+            $table->string('username')->unique();
+            $table->string('email')->nullable()->unique();
+            $table->string('password', 80)->nullable();
+            $table->string('provider')->nullable();
+            $table->bigInteger('uid')->nullable();
+            $table->string('avatar_url')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
@@ -29,6 +32,6 @@ class CreateLearnersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('users');
+        Schema::drop('learners');
     }
 }
