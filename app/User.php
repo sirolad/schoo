@@ -10,7 +10,7 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class Learner extends Model implements AuthenticatableContract,
+class User extends Model implements AuthenticatableContract,
                                     AuthorizableContract,
                                     CanResetPasswordContract
 {
@@ -21,7 +21,7 @@ class Learner extends Model implements AuthenticatableContract,
      *
      * @var string
      */
-    protected $table = 'learners';
+    protected $table = 'users';
 
     /**
      * The attributes that are mass assignable.

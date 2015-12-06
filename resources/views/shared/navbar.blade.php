@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="javascript:void(0)"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> Schoo</a>
+      <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> Schoo</a>
     </div>
     <div class="navbar-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
@@ -14,13 +14,13 @@
           <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Courses
             <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="javascript:void(0)">Action</a></li>
-            <li><a href="javascript:void(0)">Another action</a></li>
-            <li><a href="javascript:void(0)">Something else here</a></li>
+            <li><a href="javascript:void(0)">Computer Science</a></li>
+            <li><a href="javascript:void(0)">Software Development</a></li>
+            <li><a href="javascript:void(0)">Personal Development</a></li>
             <li class="divider"></li>
-            <li class="dropdown-header">Dropdown header</li>
-            <li><a href="javascript:void(0)">Separated link</a></li>
-            <li><a href="javascript:void(0)">One more separated link</a></li>
+            <li class="dropdown-header">Mathematics</li>
+            <li><a href="javascript:void(0)">Languages</a></li>
+            <li><a href="javascript:void(0)">General Knowlegde</a></li>
           </ul>
         </li>
       </ul>

@@ -5,22 +5,22 @@
 <div class="container">
     <div class="row move">
       <div class="col-sm-8">
-          <form class="form-horizontal" role="form">
+          <form class="form-horizontal" role="form" method="post" action="/signup">
           <fieldset>
           <legend>Sign Up</legend>
           <div class="form-group label-floating">
               <label class="control-label" for="focusedInput2">Username</label>
-              <input class="form-control" id="focusedInput2" type="text">
+              <input class="form-control" id="focusedInput2" type="text" name="username">
               <p class="help-block">You need to input a username</p>
             </div>
           <div class="form-group label-floating">
               <label class="control-label" for="focusedInput2">Email</label>
-              <input class="form-control" id="focusedInput2" type="email">
+              <input class="form-control" id="focusedInput2" type="email" name="email">
               <p class="help-block">You need to input an email</p>
             </div>
          <div class="form-group label-floating">
               <label class="control-label" for="focusedInput2">Password</label>
-              <input class="form-control" id="focusedInput2" type="password">
+              <input class="form-control" id="focusedInput2" type="password" name="password">
               <p class="help-block">You need to input a password</p>
             </div>
           <div class="form-group">
@@ -30,6 +30,7 @@
           </div>
         </div>
         </fieldset>
+         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         </form>
       </div>
       <div class="col-sm-4">

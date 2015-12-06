@@ -23,7 +23,7 @@ class CreateModulesTable extends Migration
             $table->timestamps();
             $table->foreign('learner_id')
                 ->references('id')
-                ->on('learners')
+                ->on('users')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
             $table->foreign('course_id')
