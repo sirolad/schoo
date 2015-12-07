@@ -34,3 +34,9 @@ Route::get('auth/{twitter}', 'AuthController@redirectToProvider');
 Route::get('auth/{twitter}/callback', 'AuthController@handleProviderCallback');
 Route::get('auth/{facebook}', 'AuthController@redirectToProvider');
 Route::get('auth/{facebook}/callback', 'AuthController@handleProviderCallback');
+
+/* Course routes using resource */
+//Route::resource('courses', 'CourseController');
+
+//Dashboard Route
+Route::get('/courses', ['middleware' => 'auth', 'uses' => 'CourseController@index']);

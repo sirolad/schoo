@@ -45,3 +45,43 @@ body {
 .move {
     margin-top: 100px;
 }
+
+.move2 {
+    margin-top: 60px;
+}
+
+.move3 {
+    margin-top: 220px;
+}
+
+.profile {
+    text-align: center;
+    display: block;
+    padding-top: 20px;
+}
+
+hr {
+    margin-top: -9px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    border-radius: 50px;
+    height: 30px;
+    width: 30px;
+}
+
+.btn:not(.btn-raised).btn-primary, .input-group-btn .btn:not(.btn-raised).btn-primary {
+    color: #fff;
+}
+
+.dec {
+    text-transform: capitalize;
+}

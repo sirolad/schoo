@@ -15,7 +15,9 @@
   <link href="css/bootstrap-social.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+  <link href="css/simple-sidebar.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  @yield('custom-css')
 </head>
 <body>
 
@@ -35,6 +37,12 @@
         $.material.init();
     });
 </script>
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
 <script src="/js/sweetalert.min.js"></script>
 @include('sweet::alert')
 </body>

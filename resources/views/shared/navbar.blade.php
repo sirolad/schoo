@@ -30,8 +30,21 @@
         </div>
       </form>
       <ul class="nav navbar-nav navbar-right">
+        @if(Auth::check())
+        <div class="dropdown">
+          <a class="btn btn-primary dropdown-toggle dec" type="button" data-toggle="dropdown"><img class="avatar" src="{{ Auth::user()->getAvatar() }}" >
+              {{ Auth::user()->username }}
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/courses">Dashboard</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="/logout">Log out</a></li>
+          </ul>
+        </div>
+        @else
         <li><a href="/login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Log in </a></li>
         <li><a href="/signup"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Register</a></li>
+        @endif
       </ul>
     </div>
   </div>

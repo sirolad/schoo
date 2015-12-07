@@ -10,7 +10,7 @@
           <legend>Sign Up</legend>
           <div class="form-group label-floating">
               <label class="control-label" for="focusedInput2">Username</label>
-              <input class="form-control" id="focusedInput2" type="text" name="username">
+              <input class="form-control" id="focusedInput2" type="text" name="username" required>
               <p class="help-block">You need to input a username</p>
             </div>
           <div class="form-group label-floating">
@@ -37,17 +37,17 @@
         <legend>Sign Up with Social Media</legend>
         <br>
         <br>
-          <a href="#" class="btn btn-block btn-social btn-lg btn-twitter">
+          <a href="/auth/twitter" class="btn btn-block btn-social btn-lg btn-twitter">
               <span class="fa fa-twitter"></span>
-              Sign in with Twitter
+              Sign Up with Twitter
             </a>
-          <a href="#" class="btn btn-block btn-social btn-lg btn-facebook">
+          <a href="/auth/facebook" class="btn btn-block btn-social btn-lg btn-facebook">
               <span class="fa fa-facebook"></span>
-              Sign in with Facebook
+              Sign Up with Facebook
             </a>
-          <a href="#" class="btn btn-block btn-social btn-lg btn-github">
+          <a href="/auth/github" class="btn btn-block btn-social btn-lg btn-github">
               <span class="fa fa-github"></span>
-              Sign in with github
+              Sign Up with github
             </a>
       </div>
     </div>

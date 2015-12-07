@@ -2,6 +2,7 @@
 
 namespace Schoo\Http\Middleware;
 
+use Alert;
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
@@ -38,7 +39,9 @@ class Authenticate
             if ($request->ajax()) {
                 return response('Unauthorized.', 401);
             } else {
-                return redirect()->guest('auth/login');
+                Alert::error('Oops','You need to login');
+
+                return redirect()->guest('/login');
             }
         }
 
