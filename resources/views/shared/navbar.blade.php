@@ -32,13 +32,13 @@
       <ul class="nav navbar-nav navbar-right">
         @if(Auth::check())
         <div class="dropdown">
-          <a class="btn btn-primary dropdown-toggle dec" type="button" data-toggle="dropdown"><img class="avatar" src="{{ Auth::user()->getAvatar() }}" >
+          <a class="btn btn-primary dropdown-toggle dec" type="button" data-toggle="dropdown"><img class="avatar1" src="{{ Auth::user()->getAvatar() }}" >
               {{ Auth::user()->username }}
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/courses">Dashboard</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="/logout">Log out</a></li>
+            <li><a href="/courses"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Dashboard</a></li>
+            <li><a href="/profile"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Account Settings</a></li>
+            <li><a href="/logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Log out</a></li>
           </ul>
         </div>
         @else

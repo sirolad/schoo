@@ -40,3 +40,9 @@ Route::get('auth/{facebook}/callback', 'AuthController@handleProviderCallback');
 
 //Dashboard Route
 Route::get('/courses', ['middleware' => 'auth', 'uses' => 'CourseController@index']);
+
+/* Profile Settings Route */
+Route::get('/profile', ['middleware' => 'auth', 'uses' => 'ProfileController@index']);
+Route::post('/profile', 'ProfileController@edit');
+
+Route::post('/profile/avatar', 'ProfileController@update');
