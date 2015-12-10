@@ -2,9 +2,13 @@
 
 namespace Schoo\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use Auth;
+use Alert;
+use Redirect;
+use Cloudder;
+use Schoo\User;
 use Schoo\Http\Requests;
+use Illuminate\Http\Request;
 use Schoo\Http\Controllers\Controller;
 
 class ProfileController extends Controller
@@ -25,9 +29,13 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
+        $input = $request->except('_token','url');
+        User::find(Auth::user()->id)->updateProfile($input);
+        Alert::success('Good', 'You have successfully updated your profile');
 
+        return redirect('/courses');
     }
 
     /**
@@ -37,8 +45,17 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $img = $request->file('avatar');
+
+        Cloudder::upload($img);
+        $imgurl = Cloudder::getResult()['url'];
+
+        User::find(Auth::user()->id)->updateAvatar($imgurl);
+
+        Alert::success('Good','Avatar updated successfully');
+
+        return redirect('/courses');
     }
 }

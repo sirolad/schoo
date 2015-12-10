@@ -12,8 +12,8 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
         <div class="profile">
-            <img class="img-circle" width="160px" height="160px" src="http://res.cloudinary.com/dqmv6brld/image/upload/v1449403069/pix_qlwbr7.jpg">
-            <h3>Student One</h3>
+            <img class="img-circle" width="160px" height="160px" src="{{ Auth::user()->getAvatar() }}">
+            <h3>{{ Auth::user()->username }}</h3>
             <hr>
         </div>
 

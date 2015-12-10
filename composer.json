@@ -9,6 +9,7 @@
         "laravel/framework": "5.1.*",
         "uxweb/sweet-alert": "~1.1",
         "laravel/socialite": "^2.0",
+        "jrm2k6/cloudder": "^0.2.0",
         "laravelcollective/html": "5.1.*"
     },
     "require-dev": {

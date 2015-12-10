@@ -146,6 +146,7 @@ return [
         Schoo\Providers\AuthServiceProvider::class,
         Schoo\Providers\EventServiceProvider::class,
         Schoo\Providers\RouteServiceProvider::class,
+        JD\Cloudder\CloudderServiceProvider::class,
 
     ],
 
@@ -196,6 +197,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Alert'     => UxWeb\SweetAlert\SweetAlert::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Cloudder'  => JD\Cloudder\Facades\Cloudder::class,
 
     ],
 

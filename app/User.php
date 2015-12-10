@@ -52,6 +52,33 @@ class User extends Model implements AuthenticatableContract,
      */
     public function getAvatar()
     {
-        return (! is_null($this->avatar)) ? $this->avatar : $this->getAvatarFromGravatar();
+        return (! is_null($this->avatar_url)) ? $this->avatar_url : $this->getAvatarFromGravatar();
+    }
+    /**
+     * Updates each field of the Account setting page
+     * @param  string $formData
+     * @return string
+     */
+    public function updateProfile($formData)
+    {
+        foreach ($formData as $key => $value) {
+            if (! empty($value)) {
+                $this->$key = $value;
+            }
+        }
+
+        $this->save();
+    }
+
+    /**
+     * update users Avatar
+     * @param  [type] $img [description]
+     * @return [type]      [description]
+     */
+    public function updateAvatar($img)
+    {
+        $this->avatar_url = $img;
+
+        $this->save();
     }
 }

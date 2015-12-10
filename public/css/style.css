@@ -78,6 +78,17 @@ hr {
     width: 30px;
 }
 
+.avatar2 {
+    border-radius: 10px;
+    height: 200px;
+    width: 200px;
+    position: overflow;
+}
+
+.profile h3 {
+    color: #fff;
+}
+
 .btn:not(.btn-raised).btn-primary, .input-group-btn .btn:not(.btn-raised).btn-primary {
     color: #fff;
 }
