@@ -36,10 +36,8 @@ Route::get('auth/{facebook}', 'AuthController@redirectToProvider');
 Route::get('auth/{facebook}/callback', 'AuthController@handleProviderCallback');
 
 /* Course routes using resource */
-//Route::resource('courses', 'CourseController');
+Route::resource('courses', 'CourseController');
 
-//Dashboard Route
-Route::get('/courses', ['middleware' => 'auth', 'uses' => 'CourseController@index']);
 
 /* Profile Settings Route */
 Route::get('/profile', ['middleware' => 'auth', 'uses' => 'ProfileController@index']);

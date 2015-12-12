@@ -1,7 +1,7 @@
 @extends('layouts.master') @section('title', 'Account Settings') @section('custom-css')
 <link rel="stylesheet" href="css/course.css"> @endsection @section('content')
 <div class="container move">
-    <h1>Edit Profile</h1>
+    <h1>Account Settings</h1>
     <hr>
     <div class="row">
         <!-- left column -->

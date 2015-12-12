@@ -26,7 +26,7 @@
       </ul>
       <form class="navbar-form navbar-left">
         <div class="form-group">
-          <input type="text" class="form-control col-md-8" placeholder="I want to learn about...">
+          <input type="search" class="form-control col-md-8" placeholder="I want to learn about...">
         </div>
       </form>
       <ul class="nav navbar-nav navbar-right">
