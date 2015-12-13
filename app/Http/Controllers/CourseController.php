@@ -89,7 +89,7 @@ class CourseController extends Controller
     {
         $course = Course::find($id);
 
-        return view('courses.show')->withCourse($course);
+        return view('courses.show', compact(['course']));
     }
 
     /**

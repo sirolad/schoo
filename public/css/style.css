@@ -125,3 +125,14 @@ modal-color: yellow;
     -webkit-transition-timing-function: ease-out;
     -webkit-transition-duration: 500ms;
 }
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+      max-height: 515px;
+}
+
+.carousel-inner>.item>img {
+    line-height: 1;
+}
