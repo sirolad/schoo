@@ -61,15 +61,15 @@
                     @foreach($courses as $course)
                         <div class="col-lg-4 col-sm-6">
                         <div class="thumbnail">
-                            <a href="http://i1.ytimg.com/{{ $course->video_id }}/mqdefault.jpg" class="post-image-link">
+                            <a href="/courses/{{ $course->id }}" class="post-image-link">
                                 <p>
-                                    <img src="http://i1.ytimg.com/vi/{{ $course->video_id }}/mqdefault.jpg" class="img-responsive" alt="Course Image">
+                                    <img src="http://i1.ytimg.com/vi/{{ $course->video_id }}/hqdefault.jpg" class="img-responsive" alt="Course Image">
                                 </p>
                             </a>
                             <div class="caption">
                                 <h3>{{ $course->course}}</h3>
                                 <p>{{ $course->description }}</p>
-                                <a href="" class="btn btn-primary btn-raised">Start Course</a>
+                                <a href="/courses/{{ $course->id }}" class="btn btn-primary btn-raised">Start Course</a>
                             </div>
                         </div>
                     </div>
