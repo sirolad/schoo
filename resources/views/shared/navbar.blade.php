@@ -22,9 +22,10 @@
           </ul>
         </li>
       </ul>
-      <form class="navbar-form navbar-left">
+      <form class="navbar-form navbar-left" method="POST" action="search">
+      <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group">
-          <input type="search" class="form-control col-md-8" placeholder="I want to learn about...">
+          <input type="search" class="form-control col-md-8" placeholder="I want to learn about..." name="search">
         </div>
       </form>
       <ul class="nav navbar-nav navbar-right">

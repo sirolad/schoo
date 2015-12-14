@@ -53,3 +53,6 @@ Route::get('languages', 'HomeController@getLanguages');
 Route::get('general-knowledge', 'HomeController@getGeneral');
 Route::get('personal-development', 'HomeController@getPersonal');
 Route::get('software-development', 'HomeController@getSoftware');
+
+//  search courses route
+Route::post('/search', 'SearchController@search');
