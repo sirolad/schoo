@@ -48,7 +48,7 @@
                             <a href="javascript:void(0)" class="btn btn-danger btn-fab pull-right" data-toggle="modal" data-target="#CourseModal"><i class="material-icons">library_add</i></a>
                             </div>
                         </div>
-                        <p>This are the courses you have upload module(s) for.</p>
+                        <p>These are the courses you have uploaded module(s) for.</p>
                     </div>
                 </div>
             </div>

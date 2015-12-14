@@ -15,7 +15,7 @@ class CourseController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth',['except' => 'show']);
     }
     /**
      * Display a listing of the resource.
@@ -25,6 +25,7 @@ class CourseController extends Controller
     public function index()
     {
         $courses = Course::orderBy('created_at', 'desc')->get();
+        //$courses = Course::where('section','General Knowledge')->get();
 
         return view('courses.index')->withCourses($courses);
     }

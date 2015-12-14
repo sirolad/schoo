@@ -28,9 +28,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function getComputer()
     {
-        //
+        $courses = Course::where('section','Computer Science')->get();
+
+        return view('courses.computer')->withCourses($courses);
     }
 
     /**
@@ -39,9 +41,11 @@ class HomeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function getLanguages()
     {
-        //
+        $courses = Course::where('section','Languages')->get();
+
+        return view('courses.languages')->withCourses($courses);
     }
 
     /**
@@ -50,9 +54,11 @@ class HomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function getGeneral()
     {
-        //
+        $courses = Course::where('section','General Knowledge')->get();
+
+        return view('courses.general')->withCourses($courses);
     }
 
     /**
@@ -61,9 +67,11 @@ class HomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function getSoftware()
     {
-        //
+        $courses = Course::where('section','Software Development')->get();
+
+        return view('courses.software')->withCourses($courses);
     }
 
     /**
@@ -73,19 +81,10 @@ class HomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function getPersonal()
     {
-        //
-    }
+        $courses = Course::where('section','Personal Development')->get();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return view('courses.personal')->withCourses($courses);
     }
 }

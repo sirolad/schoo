@@ -46,3 +46,10 @@ Route::get('/profile', ['middleware' => 'auth', 'uses' => 'ProfileController@ind
 Route::post('/profile', 'ProfileController@edit');
 
 Route::post('/profile/avatar', 'ProfileController@update');
+
+/* Section Routes for courses*/
+Route::get('computer-science', 'HomeController@getComputer');
+Route::get('languages', 'HomeController@getLanguages');
+Route::get('general-knowledge', 'HomeController@getGeneral');
+Route::get('personal-development', 'HomeController@getPersonal');
+Route::get('software-development', 'HomeController@getSoftware');

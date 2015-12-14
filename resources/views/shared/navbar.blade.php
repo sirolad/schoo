@@ -14,11 +14,11 @@
           <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Courses
             <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="javascript:void(0)">Computer Science</a></li>
-            <li><a href="javascript:void(0)">Software Development</a></li>
-            <li><a href="javascript:void(0)">Personal Development</a></li>
-            <li><a href="javascript:void(0)">Languages</a></li>
-            <li><a href="javascript:void(0)">General Knowlegde</a></li>
+            <li><a href="/computer-science">Computer Science</a></li>
+            <li><a href="/software-development">Software Development</a></li>
+            <li><a href="/personal-development">Personal Development</a></li>
+            <li><a href="/languages">Languages</a></li>
+            <li><a href="/general-knowledge">General Knowlegde</a></li>
           </ul>
         </li>
       </ul>
