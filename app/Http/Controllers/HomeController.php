@@ -4,6 +4,9 @@ namespace Schoo\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Auth;
+use Alert;
+use Schoo\Course;
 use Schoo\Http\Requests;
 use Schoo\Http\Controllers\Controller;
 
@@ -16,7 +19,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $courses = Course::get()->take(4);
+        return view('index', compact('courses'));
     }
 
     /**

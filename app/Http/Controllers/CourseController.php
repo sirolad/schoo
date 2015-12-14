@@ -89,7 +89,11 @@ class CourseController extends Controller
     {
         $course = Course::find($id);
 
-        return view('courses.show', compact(['course']));
+        if ($course) {
+            return view('courses.show', compact(['course']));
+        }
+
+        abort(404);
     }
 
     /**
@@ -102,7 +106,11 @@ class CourseController extends Controller
     {
         $course = Course::find($id);
 
-        return view('courses.edit')->withCourse($course);
+        if ($course) {
+            return view('courses.edit')->withCourse($course);
+        }
+
+        abort(404);
     }
 
     /**
@@ -131,9 +139,12 @@ class CourseController extends Controller
     public function destroy($id)
     {
         $course = Course::findOrFail($id);
-        $course->delete();
+        if ($course) {
+            $course->delete();
 
-        return [ 'status_code' => 200, 'message' => 'Course deleted successfully'];
+            return [ 'status_code' => 200, 'message' => 'Course deleted successfully'];
+        }
+        abort(404);
     }
 
     /**

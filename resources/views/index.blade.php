@@ -7,7 +7,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 @endsection
 @section('content')
-<div class="span12">
+<div>
   <h2>Activate Carousel with JavaScript</h2>
   <div id="myCarousel" class="carousel slide">
     <!-- Indicators -->
@@ -66,34 +66,29 @@
     </a>
   </div>
 </div>
-
-<script>
-$(document).ready(function(){
-    // Activate Carousel
-    $("#myCarousel").carousel();
-
-    // Enable Carousel Indicators
-    $(".item1").click(function(){
-        $("#myCarousel").carousel(0);
-    });
-    $(".item2").click(function(){
-        $("#myCarousel").carousel(1);
-    });
-    $(".item3").click(function(){
-        $("#myCarousel").carousel(2);
-    });
-    $(".item4").click(function(){
-        $("#myCarousel").carousel(3);
-    });
-
-    // Enable Carousel Controls
-    $(".left").click(function(){
-        $("#myCarousel").carousel("prev");
-    });
-    $(".right").click(function(){
-        $("#myCarousel").carousel("next");
-    });
-});
-</script>
+<div class="container">
+  <br>
+  <h3 style="text-align: center">Featured Courses</h3>
+  <div class="row previews">
+    @if($courses)
+        @foreach($courses as $course)
+            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="thumbnail">
+                <a href="/courses/{{ $course->id }}" class="post-image-link">
+                    <p>
+                        <img src="http://i1.ytimg.com/vi/{{ $course->video_id }}/hqdefault.jpg" class="img-responsive" alt="Course Image">
+                    </p>
+                </a>
+                <div class="caption">
+                    <h3>{{ $course->course}}</h3>
+                    <p>{{ $course->description }}</p>
+                    <a href="/courses/{{ $course->id }}" class="btn btn-primary btn-raised">Start Course</a>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    @endif
+  </div>
+</div>
 
 @endsection
