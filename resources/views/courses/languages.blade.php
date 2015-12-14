@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title','Computer Course')
+@section('title','Languages')
 
 @section('content')
 <div class="jumbotron move2">
