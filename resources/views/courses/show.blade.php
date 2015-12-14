@@ -30,7 +30,7 @@
         <br>
         <br>
         <h3>Created By</h3>
-        <small>{{ $course->user_id }}</small>
+        <small>{{ $course->user->username }}</small>
         <br>
         <br>
         <div class="btn-group">
@@ -38,6 +38,7 @@
           <button id="delete" class="btn btn-raised btn-danger">Delete <i class="fa fa-trash-o"></i></button>
         </div>
       </div>
+      <button type="button" class="btn btn-info btn-xlarge btn-raised" style="align:center">Back to Courses</button>
     </div>
   </div>
 </div>

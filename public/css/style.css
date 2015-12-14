@@ -150,4 +150,10 @@ modal-color: yellow;
     color: inherit;
     background-color: #eee;
 }
-
+.btn-xlarge {
+    padding: 18px 28px;
+    font-size: 22px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
