@@ -76,7 +76,7 @@
                     @endforeach
                 @endif
                 @if( $courses->isEmpty() )
-                    <h3>No Projects</h3>
+                    <h3>No Course uploaded yet!</h3>
                 @endif
                 </div>
             </div>

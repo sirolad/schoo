@@ -17,8 +17,6 @@
             <li><a href="javascript:void(0)">Computer Science</a></li>
             <li><a href="javascript:void(0)">Software Development</a></li>
             <li><a href="javascript:void(0)">Personal Development</a></li>
-            <li class="divider"></li>
-            <li class="dropdown-header">Mathematics</li>
             <li><a href="javascript:void(0)">Languages</a></li>
             <li><a href="javascript:void(0)">General Knowlegde</a></li>
           </ul>

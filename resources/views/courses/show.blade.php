@@ -35,10 +35,10 @@
         <br>
         <div class="btn-group">
           <a href="/courses/{{ $course->id }}/edit" class="btn btn-raised btn-info">Edit</a>
-          <button id="delete" class="btn btn-raised btn-danger">Delete <i class="fa fa-trash-o"></i></button>
+          <a class="btn btn-raised btn-danger delete" data-id="{{ $course->id }}">Delete <i class="fa fa-trash-o"></i></a>
         </div>
       </div>
-      <button type="button" class="btn btn-info btn-xlarge btn-raised" style="align:center">Back to Courses</button>
+      <a href="/courses" class="btn btn-info btn-xlarge btn-raised" style="margin-left:40px;">Back to Courses <span class="glyphicon glyphicon-share-alt"></span></a>
     </div>
   </div>
 </div>

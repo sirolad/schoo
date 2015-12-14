@@ -38,6 +38,8 @@ Route::get('auth/{facebook}/callback', 'AuthController@handleProviderCallback');
 /* Course routes using resource */
 Route::resource('courses', 'CourseController');
 
+Route::delete('courses/{id}/delete', 'CourseController@destroy');
+
 
 /* Profile Settings Route */
 Route::get('/profile', ['middleware' => 'auth', 'uses' => 'ProfileController@index']);
