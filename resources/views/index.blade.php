@@ -24,32 +24,32 @@
       <div class="item active">
         <img src="http://res.cloudinary.com/dqmv6brld/image/upload/v1449244973/photodune-4161018-group-of-students-m_agr1vv.jpg" alt="Chania" width="460" height="345">
         <div class="carousel-caption">
-          <h3>Chania</h3>
-          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+          <h3>Schoo</h3>
+          <p>Learning online without boundaries.</p>
         </div>
       </div>
 
       <div class="item">
-        <img src="http://res.cloudinary.com/dqmv6brld/image/upload/v1449244973/photodune-4161018-group-of-students-m_agr1vv.jpg" alt="Chania" width="460" height="345">
+        <img src="http://res.cloudinary.com/dqmv6brld/image/upload/v1450071559/nad_myc1e4.jpg" alt="Chania" width="460" height="345">
         <div class="carousel-caption">
-          <h3>Chania</h3>
-          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+          <h3>Schoo</h3>
+          <p>There is something for all ages.</p>
         </div>
       </div>
 
       <div class="item">
-        <img src="http://res.cloudinary.com/dqmv6brld/image/upload/v1449244973/photodune-4161018-group-of-students-m_agr1vv.jpg" alt="Flower" width="460" height="345">
+        <img src="http://res.cloudinary.com/dqmv6brld/image/upload/v1450070600/high-school-students_zzuylo.jpg" alt="Flower" width="460" height="345">
         <div class="carousel-caption">
-          <h3>Flowers</h3>
-          <p>Beatiful flowers in Kolymbari, Crete.</p>
+          <h3>Schoo</h3>
+          <p>Over 1000 courses teaching with fun.</p>
         </div>
       </div>
 
       <div class="item">
-        <img src="http://res.cloudinary.com/dqmv6brld/image/upload/v1449244973/photodune-4161018-group-of-students-m_agr1vv.jpg" alt="Flower" width="460" height="345">
+        <img src="http://res.cloudinary.com/dqmv6brld/image/upload/v1450070944/29969-students-face_vn03ed.jpg" alt="Flower" width="460" height="345">
         <div class="carousel-caption">
-          <h3>Flowers</h3>
-          <p>Beatiful flowers in Kolymbari, Crete.</p>
+          <h3>Schoo</h3>
+          <p>My secret place for all school assignment.</p>
         </div>
       </div>
 

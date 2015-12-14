@@ -12,13 +12,13 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Bootstrap Material Design -->
-  <link href="css/bootstrap-material-design.css" rel="stylesheet">
-  <link href="css/ripples.min.css" rel="stylesheet">
-  <link href="css/bootstrap-social.css" rel="stylesheet">
+  <link href="{{ asset('css/bootstrap-material-design.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/ripples.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/bootstrap-social.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
-  <link href="css/simple-sidebar.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{asset('css/sweetalert.css')}}">
+  <link href="{{ asset('css/simple-sidebar.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
   @yield('custom-css')
 </head>
 <body>
@@ -29,23 +29,13 @@
 
         @include('shared.footer')
 
-<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="/js/ripples.min.js"></script>
 <script src="/js/material.min.js"></script>
-<script>
-    $(document).ready(function() {
-        // This command is used to initialize some elements and make them work properly
-        $.material.init();
-    });
-</script>
-<script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+<script type="text/javascript"></script>
+<script src="/js/app.js"></script>
 <script src="/js/sweetalert.min.js"></script>
 @include('sweet::alert')
 </body>

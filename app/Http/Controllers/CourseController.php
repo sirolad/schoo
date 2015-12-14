@@ -100,7 +100,9 @@ class CourseController extends Controller
      */
     public function edit($id)
     {
-        //
+        $course = Course::find($id);
+
+        return view('courses.edit')->withCourse($course);
     }
 
     /**
@@ -112,7 +114,12 @@ class CourseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $course = Course::findOrFail($id);
+        $values = $request->all();
+        $course->fill($values)->save();
+        Alert::success('Good', 'Course Information updated successfully');
+
+        return redirect()->route('courses.index');
     }
 
     /**
@@ -123,7 +130,11 @@ class CourseController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $course = Course::findOrFail($id);
+        $course->delete();
+        Alert::success('Good', 'Course deleted successfully');
+
+        return redirect()->route('courses.index');
     }
 
     /**

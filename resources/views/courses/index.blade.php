@@ -2,7 +2,7 @@
 @section('title', 'Dashboard')
 
 @section('custom-css')
-<link rel="stylesheet" href="css/course.css">
+<link rel="stylesheet" href="{{ asset('css/course.css') }}">
 @endsection
 
 @section('content')

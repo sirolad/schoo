@@ -103,6 +103,12 @@ left:50%;
 modal-color: yellow;
 }
 
+#DeleteModal {
+top:38%;
+left:50%;
+modal-color: yellow;
+}
+
 .modal-header {
     min-height: 16.43px;
     padding: 15px;
@@ -136,3 +142,12 @@ modal-color: yellow;
 .carousel-inner>.item>img {
     line-height: 1;
 }
+
+.jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #eee;
+}
+
