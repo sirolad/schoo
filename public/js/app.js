@@ -83,6 +83,9 @@ $(document).ready(function(){
     $(".item4").click(function(){
         $("#myCarousel").carousel(3);
     });
+    $(".item5").click(function(){
+        $("#myCarousel").carousel(4);
+    });
 
     // Enable Carousel Controls
     $(".left").click(function(){

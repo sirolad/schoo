@@ -16,6 +16,7 @@
       <li class="item2"></li>
       <li class="item3"></li>
       <li class="item4"></li>
+      <li class="item5"></li>
     </ol>
 
     <!-- Wrapper for slides -->
@@ -50,6 +51,14 @@
         <div class="carousel-caption">
           <h3>Schoo</h3>
           <p>My secret place for all school assignment.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="http://res.cloudinary.com/dqmv6brld/image/upload/v1450137757/cchub_gqtlew.jpg" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Schoo</h3>
+          <p>Laying the Foundation for Future Generations.</p>
         </div>
       </div>
 
