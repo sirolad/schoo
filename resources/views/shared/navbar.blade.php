@@ -6,7 +6,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> Schoo</a>
+      <a class="navbar-brand" href="/">
+      <img src="http://res.cloudinary.com/dqmv6brld/image/upload/v1450190943/Screen_Shot_2015-12-15_at_3.48.38_PM_urvgle.png" class="img-responsive" style="margin-top: -15px;"></a>
     </div>
     <div class="navbar-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">

@@ -2,8 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-3">
-        <h1>Schoo</h1>
-        <h4>Learning For Humans</h4>
+        <img src="http://res.cloudinary.com/dqmv6brld/image/upload/v1450190511/Screen_Shot_2015-12-15_at_3.39.56_PM_rkag9i.png" class="img-responsive">
       </div>
       <div class="col-sm-3">
         <h3>Explore</h3>
