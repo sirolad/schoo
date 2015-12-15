@@ -24,7 +24,7 @@ class CourseController extends Controller
      */
     public function index()
     {
-        $courses = Course::orderBy('created_at', 'desc')->get();
+        $courses = Course::orderBy('created_at', 'desc')->personal()->get();
         //$courses = Course::where('section','General Knowledge')->get();
 
         return view('courses.index')->withCourses($courses);

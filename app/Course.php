@@ -2,6 +2,7 @@
 
 namespace Schoo;
 
+use Auth;
 use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
@@ -21,5 +22,15 @@ class Course extends Model
     public function user()
     {
         return $this->belongsTo('Schoo\User');
+    }
+
+    /**
+     * Set scope for personal courses.
+     * @param  string
+     * @return string
+     */
+    public function scopePersonal($query)
+    {
+        return $query->where('user_id', Auth::user()->id);
     }
 }

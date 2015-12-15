@@ -50,7 +50,7 @@
         <img src="http://res.cloudinary.com/dqmv6brld/image/upload/v1450070944/29969-students-face_vn03ed.jpg" alt="Flower" width="460" height="345">
         <div class="carousel-caption">
           <h3>Schoo</h3>
-          <p>My secret place for all school assignment.</p>
+          <p>My secret place for all school assignments.</p>
         </div>
       </div>
 
