@@ -82,7 +82,7 @@
     @if($courses)
         @foreach($courses as $course)
             <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="thumbnail">
+            <div class="thumbnail back">
                 <a href="/courses/{{ $course->slug }}" class="post-image-link">
                     <p>
                         <img src="http://i1.ytimg.com/vi/{{ $course->video_id }}/hqdefault.jpg"
@@ -116,7 +116,7 @@
                                 <i class="fa fa-cloud fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>Over 1000 Courses</strong>
                                 </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             </div>
@@ -128,7 +128,7 @@
                                 <i class="fa fa-compass fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>Best Tutorials</strong>
                                 </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             </div>
@@ -140,7 +140,7 @@
                                 <i class="fa fa-flask fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>Practical</strong>
                                 </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             </div>
@@ -152,7 +152,7 @@
                                 <i class="fa fa-shield fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>Certified Courses</strong>
                                 </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             </div>
