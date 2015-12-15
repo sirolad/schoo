@@ -118,7 +118,7 @@
                                 <h4>
                                     <strong>Over 1000 Courses</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <p>Our Courses Span all fields of Human Knowlegde.</p>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -130,7 +130,7 @@
                                 <h4>
                                     <strong>Best Tutorials</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <p>Second to none Pedagogical Practices ever implemented.</p>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -142,7 +142,7 @@
                                 <h4>
                                     <strong>Practical</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <p>Elucidative Delivery make our Courses very Practical.</p>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -154,7 +154,7 @@
                                 <h4>
                                     <strong>Certified Courses</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <p>Our Courses Span are Approved By UNESCO.</p>
                             </div>
                         </div>
                     </div>
