@@ -90,7 +90,7 @@
                 </a>
                 <div class="caption">
                     <h3>{{ $course->course}}</h3>
-                    <p>{{ $course->description }}</p>
+                    <p>{{ $course->section }}</p>
                     <a href="/courses/{{ $course->id }}" class="btn btn-primary btn-raised">Start Course</a>
                 </div>
             </div>

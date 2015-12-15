@@ -25,9 +25,6 @@
                     <a href="#"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Courses</a>
                 </li>
                 <li>
-                    <a href="#"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Modules</a>
-                </li>
-                <li>
                     <a href="/logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Log Out</a>
                 </li>
             </ul>
@@ -68,7 +65,7 @@
                             </a>
                             <div class="caption">
                                 <h3>{{ $course->course}}</h3>
-                                <p>{{ $course->description }}</p>
+                                <p>{{ $course->section }}</p>
                                 <a href="/courses/{{ $course->id }}" class="btn btn-primary btn-raised">Start Course</a>
                             </div>
                         </div>
