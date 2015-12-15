@@ -33,12 +33,14 @@
         <small>{{ $course->user->username }}</small>
         <br>
         <br>
+        @can('owner-can-see', $course)
         <div class="btn-group">
           <a href="/courses/{{ $course->id }}/edit" class="btn btn-raised btn-info">Edit</a>
           <a class="btn btn-raised btn-danger delete" data-id="{{ $course->id }}">Delete <i class="fa fa-trash-o"></i></a>
         </div>
+        @endcan
       </div>
-      <a href="/courses" class="btn btn-info btn-xlarge btn-raised" style="margin-left:40px;">Back to Courses <span class="glyphicon glyphicon-share-alt"></span></a>
+      <a href="/all-courses" class="btn btn-info btn-xlarge btn-raised" style="margin-left:40px;">See All Courses <span class="glyphicon glyphicon-share-alt"></span></a>
     </div>
   </div>
 </div>

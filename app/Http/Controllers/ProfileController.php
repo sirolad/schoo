@@ -36,7 +36,7 @@ class ProfileController extends Controller
         if (User::where('username', '=', $request->get('username'))->exists()) {
             $input = $request->except('username', '_token', 'url');
             User::find(Auth::user()->id)->updateProfile($input);
-            Alert::warning('Oops', 'Username Already Exist');
+            Alert::warning('Oops', 'Username Already Exists');
 
             return Redirect::back();
         }

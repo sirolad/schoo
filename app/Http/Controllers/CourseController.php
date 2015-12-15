@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 
 use Auth;
 use Alert;
+use Redirect;
 use Validator;
+use Schoo\User;
 use Schoo\Course;
 use Schoo\Http\Requests;
 use Illuminate\Support\Str;
@@ -53,6 +55,12 @@ class CourseController extends Controller
 
         $course = new Course;
 
+        if (Course::where('course', '=', $request->get('course'))->exists()) {
+            Alert::warning('Oops', 'Course Already Exists');
+
+            return Redirect::back();
+        }
+
         $course->slug = Str::slug($request->input('course'));
         $checkId = $course->video_id = $this->getVideoId($request->input('url'));
         $course->user_id = Auth::user()->id;
@@ -79,10 +87,11 @@ class CourseController extends Controller
      */
     public function show($slug)
     {
+        $user = Auth::user();
         $course = Course::where('slug', $slug)->first();
 
         if ($course) {
-            return view('courses.show', compact(['course']));
+            return view('courses.show')->withCourse($course)->withUser($user);
         }
 
         abort(404);
@@ -162,5 +171,12 @@ class CourseController extends Controller
         $theURL = "http://www.youtube.com/oembed?url=http://www.youtube.com/watch?v=$videoID&format=json";
         $headers = get_headers($theURL);
         return (substr($headers[0], 9, 3) !== "404") ? true : false;
+    }
+
+    public function getAllCourses()
+    {
+        $courses = Course::orderBy('created_at', 'desc')->get();
+
+        return view('courses.courses')->withCourses($courses);
     }
 }

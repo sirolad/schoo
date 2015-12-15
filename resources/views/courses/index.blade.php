@@ -22,7 +22,7 @@
                     <a href="/profile"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Profile Settings <span class="fa arrow"></span></a>
                 </li>
                 <li>
-                    <a href="#"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Courses</a>
+                    <a href="/all-courses"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Courses</a>
                 </li>
                 <li>
                     <a href="/logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Log Out</a>

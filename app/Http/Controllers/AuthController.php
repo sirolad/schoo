@@ -59,16 +59,23 @@ class AuthController extends Controller
      */
     public function postRegister(Request $request)
     {
+        if (User::where('username', '=', $request->get('username'))->exists()) {
+            Alert::warning('Oops', 'User Already Exists');
+
+            return Redirect::back();
+        }
+
         $this->validate($request, [
             'username' => 'required|unique:users|alpha_dash|max:20',
             'email'    => 'required|unique:users|email|max:255',
             'password' => 'required|min:6',
         ]);
+        //var_dump(User::where('username', '=', $request->get('username'))->exists());
 
         $user = User::create([
             'username' => $request->input('username'),
             'email'    => $request->input('email'),
-            'password' => md5($request->input('password'))
+            'password' => bcrypt($request->input('password'))
         ]);
 
         Auth::login($user);
@@ -101,7 +108,7 @@ class AuthController extends Controller
         $field = filter_var($request['email'], FILTER_VALIDATE_EMAIL) ? "email" : "username";
         $user = User::where($field, $request['email'])->first();
         if (! is_null($user)) {
-            if ($user->password == md5($request['password'])) {
+            if ($user->password == bcrypt($request['password'])) {
                 $request->has('remember') ? Auth::login($user, true) : Auth::login($user);
                 Alert::success('Welcome Back', $user->username);
 

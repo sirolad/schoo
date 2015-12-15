@@ -37,6 +37,8 @@ Route::get('auth/{facebook}/callback', 'AuthController@handleProviderCallback');
 
 /* Course routes using resource */
 Route::resource('courses', 'CourseController');
+Route::get('all-courses', 'CourseController@getAllCourses');
+Route::delete('courses/{id}/delete', 'CourseController@destroy');
 Route::get('courses/{slug}', 'CourseController@show');
 
 

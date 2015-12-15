@@ -2,6 +2,8 @@
 
 namespace Schoo\Providers;
 
+use Auth;
+use Schoo\User;
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
@@ -27,5 +29,8 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies($gate);
 
         //
+        $gate->define('owner-can-see', function ($user, $course) {
+            return $user->id === $course->user_id;
+        });
     }
 }
