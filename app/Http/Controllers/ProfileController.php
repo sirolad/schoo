@@ -32,6 +32,15 @@ class ProfileController extends Controller
     public function edit(Request $request)
     {
         $input = $request->except('_token','url');
+
+        if (User::where('username', '=', $request->get('username'))->exists()) {
+            $input = $request->except('username', '_token', 'url');
+            User::find(Auth::user()->id)->updateProfile($input);
+            Alert::warning('Oops', 'Username Already Exist');
+
+            return Redirect::back();
+        }
+
         User::find(Auth::user()->id)->updateProfile($input);
         Alert::success('Good', 'You have successfully updated your profile');
 
@@ -49,13 +58,18 @@ class ProfileController extends Controller
     {
         $img = $request->file('avatar');
 
-        Cloudder::upload($img);
-        $imgurl = Cloudder::getResult()['url'];
+        if (isset($img)) {
+            Cloudder::upload($img);
+            $imgurl = Cloudder::getResult()['url'];
 
-        User::find(Auth::user()->id)->updateAvatar($imgurl);
+            User::find(Auth::user()->id)->updateAvatar($imgurl);
 
-        Alert::success('Good','Avatar updated successfully');
+            Alert::success('Good','Avatar updated successfully');
 
-        return redirect('/courses');
+            return redirect('/courses');
+        }
+        Alert::warning('Oops', 'You need to select a file!');
+
+        return Redirect::back();
     }
 }

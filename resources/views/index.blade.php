@@ -85,7 +85,8 @@
             <div class="thumbnail">
                 <a href="/courses/{{ $course->id }}" class="post-image-link">
                     <p>
-                        <img src="http://i1.ytimg.com/vi/{{ $course->video_id }}/hqdefault.jpg" class="img-responsive" alt="Course Image">
+                        <img src="http://i1.ytimg.com/vi/{{ $course->video_id }}/hqdefault.jpg"
+                        class="img-responsive img" alt="Course Image">
                     </p>
                 </a>
                 <div class="caption">

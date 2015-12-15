@@ -19,6 +19,7 @@ class CreateCoursesTable extends Migration
             $table->string('url');
             $table->string('video_id');
             $table->string('section');
+            $table->string('slug');
             $table->integer('user_id')->unsigned();
             $table->timestamps();
 

@@ -9,6 +9,7 @@ use Alert;
 use Validator;
 use Schoo\Course;
 use Schoo\Http\Requests;
+use Illuminate\Support\Str;
 use Schoo\Http\Controllers\Controller;
 
 class CourseController extends Controller
@@ -25,19 +26,8 @@ class CourseController extends Controller
     public function index()
     {
         $courses = Course::orderBy('created_at', 'desc')->personal()->get();
-        //$courses = Course::where('section','General Knowledge')->get();
 
         return view('courses.index')->withCourses($courses);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
     }
 
     /**
@@ -63,6 +53,7 @@ class CourseController extends Controller
 
         $course = new Course;
 
+        $course->slug = Str::slug($request->input('course'));
         $checkId = $course->video_id = $this->getVideoId($request->input('url'));
         $course->user_id = Auth::user()->id;
 
@@ -86,9 +77,9 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        $course = Course::find($id);
+        $course = Course::where('slug', $slug)->first();
 
         if ($course) {
             return view('courses.show', compact(['course']));
