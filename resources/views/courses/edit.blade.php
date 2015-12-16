@@ -30,13 +30,9 @@
                   <label for="select111" class="col-md-2 control-label">Section</label>
 
                   <div class="col-md-10">
-                    <select id="select111" class="form-control" name="section">
-                      <option>{{ $course->section }}</option>
-                      <option>Computer Science</option>
-                      <option>Software Development</option>
-                      <option>Personal Development</option>
-                      <option>Languages</option>
-                      <option>General Knowledge</option>
+                    <select class="form-control" name="section">
+                      <option value="{{ $course->section }}">{{ $course->section }}</option>
+                      {{ getSection($course->section) }}
                     </select>
                   </div>
             </div>

@@ -136,12 +136,17 @@ modal-color: yellow;
   .carousel-inner > .item > a > img {
       width: 100%;
       margin: auto;
+      height: 515px;
 }
 
 .carousel-inner>.item>img {
     line-height: 1;
 }
 
+/*.carousel-inner {
+    height: 515px;
+}
+*/
 .jumbotron {
     padding-top: 30px;
     padding-bottom: 30px;

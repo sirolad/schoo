@@ -54,6 +54,7 @@ class User extends Model implements AuthenticatableContract,
     {
         return (! is_null($this->avatar_url)) ? $this->avatar_url : $this->getAvatarFromGravatar();
     }
+
     /**
      * Updates each field of the Account setting page
      * @param  string $formData
