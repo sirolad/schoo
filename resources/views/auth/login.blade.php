@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title', 'Schoo | Login')
-
+<!--Login Form Including links for Social Authentication-->
 @section('content')
 <div class="container">
     <div class="row move">

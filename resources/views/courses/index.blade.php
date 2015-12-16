@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title', 'Dashboard')
-
+<!-- View for User's dashboard-->
 @section('custom-css')
 <link rel="stylesheet" href="{{ asset('css/course.css') }}">
 @endsection
@@ -42,7 +42,7 @@
                                 <h1>Uploaded Courses</h1>
                             </div>
                             <div class="col-md-2">
-                            <a href="javascript:void(0)" class="btn btn-danger btn-fab pull-right" data-toggle="modal" data-target="#CourseModal"><i class="material-icons">library_add</i></a>
+                            <a href="#" class="btn btn-danger btn-fab pull-right" data-toggle="modal" data-target="#CourseModal"><i class="material-icons">library_add</i></a>
                             </div>
                         </div>
                         <p>These are the courses you have uploaded module(s) for.</p>

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title','All Courses')
-
+<!-- View for all Courses only-->
 @section('content')
 <div class="jumbotron move2">
     <div class="container">

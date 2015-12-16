@@ -16,6 +16,9 @@ use Schoo\Http\Controllers\Controller;
 
 class CourseController extends Controller
 {
+    /**
+     * handles authenticate middleware
+     */
     public function __construct()
     {
         $this->middleware('auth',['except' => 'show']);
@@ -173,6 +176,10 @@ class CourseController extends Controller
         return (substr($headers[0], 9, 3) !== "404") ? true : false;
     }
 
+    /**
+     * View to all courses for authenticated user
+     * @return void
+     */
     public function getAllCourses()
     {
         $courses = Course::orderBy('created_at', 'desc')->paginate(20);

@@ -24,7 +24,7 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * View for computer science courses.
      *
      * @return \Illuminate\Http\Response
      */
@@ -36,7 +36,7 @@ class HomeController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * View for languages courses.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -49,7 +49,7 @@ class HomeController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * View for General Knowledge courses
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -62,7 +62,7 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * View for software development courses.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -75,7 +75,7 @@ class HomeController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * View for personal development courses.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id

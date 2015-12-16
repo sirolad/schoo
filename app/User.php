@@ -73,8 +73,8 @@ class User extends Model implements AuthenticatableContract,
 
     /**
      * update users Avatar
-     * @param  [type] $img [description]
-     * @return [type]      [description]
+     * @param  file
+     * @return void
      */
     public function updateAvatar($img)
     {

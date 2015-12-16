@@ -27,8 +27,6 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
-
-        $this->middleware('oauthUser', ['only' => ['getOauth']]);
     }
 
     /**
@@ -65,17 +63,22 @@ class AuthController extends Controller
             return Redirect::back();
         }
 
+        if (User::where('email', '=', $request->get('email'))->exists()) {
+            Alert::warning('Oops', 'User Already Exists');
+
+            return Redirect::back();
+        }
+
         $this->validate($request, [
             'username' => 'required|unique:users|alpha_dash|max:20',
             'email'    => 'required|unique:users|email|max:255',
             'password' => 'required|min:6',
         ]);
-        //var_dump(User::where('username', '=', $request->get('username'))->exists());
 
         $user = User::create([
             'username' => $request->input('username'),
             'email'    => $request->input('email'),
-            'password' => bcrypt($request->input('password'))
+            'password' => md5($request->input('password'))
         ]);
 
         Auth::login($user);
@@ -85,16 +88,9 @@ class AuthController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
+     * Logs out an authentiacated user
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
-
     public function getLogOut()
     {
         Auth::logout();
@@ -103,12 +99,17 @@ class AuthController extends Controller
         return redirect()->route('index');
     }
 
+    /**
+     * Enables a user to log in using email or username
+     * @param  Request $request
+     * @return void
+     */
     public function postLogin(Request $request)
     {
         $field = filter_var($request['email'], FILTER_VALIDATE_EMAIL) ? "email" : "username";
         $user = User::where($field, $request['email'])->first();
         if (! is_null($user)) {
-            if ($user->password == bcrypt($request['password'])) {
+            if ($user->password == md5($request['password'])) {
                 $request->has('remember') ? Auth::login($user, true) : Auth::login($user);
                 Alert::success('Welcome Back', $user->username);
 

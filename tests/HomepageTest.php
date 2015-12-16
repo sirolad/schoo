@@ -16,4 +16,23 @@ class HomePageTest extends TestCase
         $this->visit('/')
              ->see('Schoo');
     }
+
+    public function testLogoutIsNotOnPage()
+    {
+          $this->visit('/')
+               ->dontSeeLink('Logout');
+    }
+    public function testCoursesArePresent()
+    {
+          $this->visit('/');
+          $this->assertViewHas('courses');
+    }
+
+    public function testOtherThingsOnHome()
+    {
+        $this->visit('/')
+             ->see('Our Services')
+             ->see('Contact Us')
+             ->dontSee('1214252345');
+    }
 }

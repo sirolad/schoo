@@ -28,7 +28,7 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies($gate);
 
-        //
+        // Allow only course creators perform action
         $gate->define('owner-can-see', function ($user, $course) {
             return $user->id === $course->user_id;
         });

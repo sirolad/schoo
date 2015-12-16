@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title','Search Results')
-
+<!-- View for Search results-->
 @section('content')
 <div class="jumbotron move2">
     <div class="container">

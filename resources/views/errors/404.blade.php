@@ -1,47 +1,18 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Be right back.</title>
-
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                color: #B0BEC5;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 72px;
-                margin-bottom: 40px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">error 404</div>
-            </div>
-        </div>
-    </body>
-</html>
+@extends('layouts.master')
+@section('title', 'Schoo | Error 404')
+@section('content')
+<div class="jumbotron move2">
+    <div class="container">
+    <h1>OOps</h1>
+    </div>
+</div>
+<div class="container" style="min-height: 180px">
+    <ul class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li class="active">Error 404</li>
+    </ul>
+ <div class="row text-center">
+     <h3>Seems You Lost Your Way</h3>
+ </div>
+</div>
+@endsection

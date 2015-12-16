@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title','edit')
-
+<!-- View for Editing Uploaded Courses-->
 @section('custom-css')
 <link rel="stylesheet" href="{{ asset('css/course.css') }}">
 @endsection

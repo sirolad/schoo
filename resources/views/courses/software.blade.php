@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title','Software Development')
-
+<!-- View for Software Development Courses only-->
 @section('content')
 <div class="jumbotron move2">
     <div class="container">

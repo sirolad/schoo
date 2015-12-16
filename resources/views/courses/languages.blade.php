@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title','Languages')
-
+<!-- View for Languages Knowledge Courses only-->
 @section('content')
 <div class="jumbotron move2">
     <div class="container">
