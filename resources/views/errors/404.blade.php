@@ -3,7 +3,7 @@
 @section('content')
 <div class="jumbotron move2">
     <div class="container">
-    <h1>OOps</h1>
+    <h1>Oops</h1>
     </div>
 </div>
 <div class="container" style="min-height: 180px">
