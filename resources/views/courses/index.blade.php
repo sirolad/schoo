@@ -57,7 +57,7 @@
                 @if($courses)
                     @foreach($courses as $course)
                         <div class="col-lg-4 col-sm-6">
-                        <div class="thumbnail">
+                        <div class="thumbnail back">
                             <a href="/courses/{{ $course->slug }}" class="post-image-link">
                                 <p>
                                     <img src="http://i1.ytimg.com/vi/{{ $course->video_id }}/hqdefault.jpg" class="img-responsive img" alt="Course Image">
