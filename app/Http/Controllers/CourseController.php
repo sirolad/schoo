@@ -27,7 +27,7 @@ class CourseController extends Controller
      */
     public function index()
     {
-        $courses = Course::orderBy('created_at', 'desc')->personal()->get();
+        $courses = Course::orderBy('created_at', 'desc')->personal()->paginate(20);
 
         return view('courses.index')->withCourses($courses);
     }
@@ -175,7 +175,7 @@ class CourseController extends Controller
 
     public function getAllCourses()
     {
-        $courses = Course::orderBy('created_at', 'desc')->get();
+        $courses = Course::orderBy('created_at', 'desc')->paginate(20);
 
         return view('courses.courses')->withCourses($courses);
     }

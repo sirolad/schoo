@@ -24,3 +24,6 @@
         @endforeach
     @endif
   </div>
+  <div class="row text-center">
+    {!! $courses->render() !!}
+  </div>

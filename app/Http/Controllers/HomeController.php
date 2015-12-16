@@ -30,7 +30,7 @@ class HomeController extends Controller
      */
     public function getComputer()
     {
-        $courses = Course::where('section','Computer Science')->get();
+        $courses = Course::where('section','Computer Science')->paginate(20);
 
         return view('courses.computer')->withCourses($courses);
     }
@@ -43,7 +43,7 @@ class HomeController extends Controller
      */
     public function getLanguages()
     {
-        $courses = Course::where('section','Languages')->get();
+        $courses = Course::where('section','Languages')->paginate(20);
 
         return view('courses.languages')->withCourses($courses);
     }
@@ -56,7 +56,7 @@ class HomeController extends Controller
      */
     public function getGeneral()
     {
-        $courses = Course::where('section','General Knowledge')->get();
+        $courses = Course::where('section','General Knowledge')->paginate(20);
 
         return view('courses.general')->withCourses($courses);
     }
@@ -69,7 +69,7 @@ class HomeController extends Controller
      */
     public function getSoftware()
     {
-        $courses = Course::where('section','Software Development')->get();
+        $courses = Course::where('section','Software Development')->paginate(20);
 
         return view('courses.software')->withCourses($courses);
     }
@@ -83,7 +83,7 @@ class HomeController extends Controller
      */
     public function getPersonal()
     {
-        $courses = Course::where('section','Personal Development')->get();
+        $courses = Course::where('section','Personal Development')->paginate(20);
 
         return view('courses.personal')->withCourses($courses);
     }
