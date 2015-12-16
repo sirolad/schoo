@@ -15,7 +15,7 @@
             </div>
          <div class="form-group label-floating">
               <label class="control-label" for="focusedInput2">Password</label>
-              <input class="form-control" id="focusedInput2" type="password" name="password">
+              <input class="form-control" id="focusedInput2" type="password" name="password" minlength="6">
               <p class="help-block">You need to input a password</p>
             </div>
         <br>

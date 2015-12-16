@@ -20,8 +20,8 @@
             </div>
          <div class="form-group label-floating">
               <label class="control-label" for="focusedInput2">Password</label>
-              <input class="form-control" id="focusedInput2" type="password" name="password">
-              <p class="help-block">You need to input a password</p>
+              <input class="form-control" id="focusedInput2" type="password" name="password" minlength="6">
+              <p class="help-block">Minimum of 6 characters</p>
             </div>
           <div class="form-group">
           <div class="col-md-10 col-md-offset-2">
