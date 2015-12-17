@@ -1,14 +1,11 @@
 <?php
 
 use Schoo\User;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class UploadCourseTest extends TestCase
 {
     /**
-     * Test user dashboard
+     * Test user dashboard.
      * */
     public function testDashBoardLoadsCorrectly()
     {
@@ -20,7 +17,7 @@ class UploadCourseTest extends TestCase
     }
 
     /**
-     * Test upload
+     * Test upload.
      * */
     public function testCourseUplaod()
     {
@@ -37,18 +34,17 @@ class UploadCourseTest extends TestCase
             //->press('Create')
             ->seePageIs('/courses');
         $this->assertResponseOk();
-
     }
 
     /**
-     * Create user to test
+     * Create user to test.
      * */
     private function createUser()
     {
         User::create([
-            'name' => 'johndoe',
-            'email' => 'john@doe.com',
-            'password' => bcrypt('password')
+            'name'     => 'johndoe',
+            'email'    => 'john@doe.com',
+            'password' => bcrypt('password'),
         ]);
     }
 }

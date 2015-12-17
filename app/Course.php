@@ -17,6 +17,7 @@ class Course extends Model
     /**
      * many to one relationship
      * many courses belong to a user.
+     *
      * @return string
      */
     public function user()
@@ -26,7 +27,9 @@ class Course extends Model
 
     /**
      * Set scope for personal courses.
+     *
      * @param  string
+     *
      * @return string
      */
     public function scopePersonal($query)
