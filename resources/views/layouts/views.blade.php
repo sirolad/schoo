@@ -1,3 +1,4 @@
+<!-- looped view of all course-->
 @if(!$courses)
       <div>
           <h4 style="text-align: center; margin-top: 20px">No results found for your query.</h4>

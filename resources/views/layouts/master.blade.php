@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--Master Blade to be extended by all class-->
 <html>
 <head>
     <title>@yield('title')</title>
