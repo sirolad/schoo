@@ -1,14 +1,11 @@
 <?php
 
 use Schoo\User;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class LoginTest extends TestCase
 {
     /**
-     * test login page
+     * test login page.
      * */
     public function testLoginPageResponse()
     {
@@ -17,7 +14,7 @@ class LoginTest extends TestCase
     }
 
     /**
-     * Test accurate content on login
+     * Test accurate content on login.
      * */
     public function testLoginPageHasRightContent()
     {
@@ -28,19 +25,19 @@ class LoginTest extends TestCase
     }
 
     /**
-     * Create User to test login functionality
+     * Create User to test login functionality.
      * */
     public function createUser()
     {
         User::create([
-            'name' => 'johndoe',
-            'email' => 'a@b.com',
-            'password'=> md5('password')
+            'name'     => 'johndoe',
+            'email'    => 'a@b.com',
+            'password' => md5('password'),
         ]);
     }
 
     /**
-     * test login works
+     * test login works.
      * */
     public function testLoginPageWorksCorrectly()
     {
@@ -54,7 +51,7 @@ class LoginTest extends TestCase
     }
 
     /**
-     * Check to see facebook login
+     * Check to see facebook login.
      * */
     public function testPageHasFaceBookLogin()
     {
@@ -63,7 +60,7 @@ class LoginTest extends TestCase
     }
 
     /**
-     * Check to see twitter login
+     * Check to see twitter login.
      * */
     public function testPageHasTwitterLogin()
     {
@@ -72,7 +69,7 @@ class LoginTest extends TestCase
     }
 
     /**
-     * Check to see github login
+     * Check to see github login.
      * */
     public function testPageHasGithubLogin()
     {

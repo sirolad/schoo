@@ -15,15 +15,15 @@
 
 Route::get('/', [
     'uses' => '\Schoo\Http\Controllers\HomeController@index',
-    'as'   => 'index'
+    'as'   => 'index',
 ]);
 
 /* Traditional sign up and log in */
 Route::get('/signup', 'AuthController@getRegister');
 Route::post('/signup', 'AuthController@postRegister');
 Route::get('/login', [
-  'uses' => 'AuthController@getLogin',
-  'as'    => 'login'
+  'uses'  => 'AuthController@getLogin',
+  'as'    => 'login',
 ]);
 Route::post('/login', 'AuthController@postLogin');
 Route::get('/logout', 'AuthController@getLogout');
@@ -40,7 +40,6 @@ Route::resource('courses', 'CourseController');
 Route::get('all-courses', 'CourseController@getAllCourses');
 Route::delete('courses/{id}/delete', 'CourseController@destroy');
 Route::get('courses/{slug}', 'CourseController@show');
-
 
 /* Profile Settings Route */
 Route::get('/profile', ['middleware' => 'auth', 'uses' => 'ProfileController@index']);

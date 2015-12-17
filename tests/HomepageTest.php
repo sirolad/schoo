@@ -1,10 +1,7 @@
 <?php
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class HomePageTest extends TestCase
+class HomepageTest extends TestCase
 {
     /**
      * Test Index.
@@ -18,25 +15,25 @@ class HomePageTest extends TestCase
     }
 
     /**
-     * Dont see logout on main page
+     * Dont see logout on main page.
      * */
     public function testLogoutIsNotOnPage()
     {
-          $this->visit('/')
+        $this->visit('/')
                ->dontSeeLink('Logout');
     }
 
     /**
-     * Test courses can be viewed on landing page
+     * Test courses can be viewed on landing page.
      * */
     public function testCoursesArePresent()
     {
-          $this->visit('/');
-          $this->assertViewHas('courses');
+        $this->visit('/');
+        $this->assertViewHas('courses');
     }
 
     /**
-     * Test other things on main page
+     * Test other things on main page.
      * */
     public function testOtherThingsOnHome()
     {

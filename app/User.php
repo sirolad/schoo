@@ -3,14 +3,15 @@
 namespace Schoo;
 
 use Illuminate\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
-use Illuminate\Foundation\Auth\Access\Authorizable;
-use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\Access\Authorizable;
 
-class User extends Model implements AuthenticatableContract,
+class User extends Model implements
+AuthenticatableContract,
                                     AuthorizableContract,
                                     CanResetPasswordContract
 {
@@ -39,6 +40,7 @@ class User extends Model implements AuthenticatableContract,
 
     /**
      * Get the avatar from gravatar.
+     *
      * @return string
      */
     private function getAvatarFromGravatar()
@@ -48,22 +50,25 @@ class User extends Model implements AuthenticatableContract,
 
     /**
      * Get avatar from the model.
+     *
      * @return string
      */
     public function getAvatar()
     {
-        return (! is_null($this->avatar_url)) ? $this->avatar_url : $this->getAvatarFromGravatar();
+        return (!is_null($this->avatar_url)) ? $this->avatar_url : $this->getAvatarFromGravatar();
     }
 
     /**
-     * Updates each field of the Account setting page
-     * @param  string $formData
+     * Updates each field of the Account setting page.
+     *
+     * @param string $formData
+     *
      * @return string
      */
     public function updateProfile($formData)
     {
         foreach ($formData as $key => $value) {
-            if (! empty($value)) {
+            if (!empty($value)) {
                 $this->$key = $value;
             }
         }
@@ -72,8 +77,10 @@ class User extends Model implements AuthenticatableContract,
     }
 
     /**
-     * update users Avatar
+     * update users Avatar.
+     *
      * @param  file
+     *
      * @return void
      */
     public function updateAvatar($img)
