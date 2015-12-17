@@ -1,3 +1,4 @@
+<-- error 404 page -->
 @extends('layouts.master')
 @section('title', 'Schoo | Error 404')
 @section('content')

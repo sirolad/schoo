@@ -1,5 +1,7 @@
 <?php
 
+namespace Schoo;
+
 use Illuminate\Support\Facades\Artisan;
 
 class TestCase extends Illuminate\Foundation\Testing\TestCase

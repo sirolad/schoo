@@ -1,5 +1,7 @@
 <?php
 
+namespace Schoo;
+
 use Schoo\User;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;

@@ -1,5 +1,7 @@
 <?php
 
+namespace Schoo;
+
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -36,6 +38,6 @@ class RegistrationPageTest extends TestCase
             ->type('password', 'password')
             ->press('Sign Up')
             ->seePageIs('/courses')
-            ->seeInDatabase('users',['username' =>'johndoe']);
+            ->seeInDatabase('users', ['username' =>'johndoe']);
     }
 }

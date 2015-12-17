@@ -1,5 +1,7 @@
 <?php
 
+namespace Schoo;
+
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
