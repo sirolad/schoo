@@ -1,6 +1,6 @@
 <?php
 
-namespace Schoo;
+
 
 /**
  * Unsets an existing selection to display yet to be displayed  options.
