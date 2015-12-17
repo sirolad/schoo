@@ -8,6 +8,9 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ProfilePageTest extends TestCase
 {
+    /**
+     * Check profile page loads
+     * */
     public function testEditProfilePageLoadsCorrectly()
     {
         $user = factory(\Schoo\User::class)->create();
@@ -19,6 +22,9 @@ class ProfilePageTest extends TestCase
         $this->assertResponseOk();
     }
 
+     /**
+     * Create User to test profile page functionality
+     * */
     private function createUser()
     {
         return User::create([

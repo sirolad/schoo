@@ -1,4 +1,5 @@
 @extends('layouts.master') @section('title', 'Account Settings') @section('custom-css')
+<!--Profile Edit View-->
 <link rel="stylesheet" href="css/course.css"> @endsection @section('content')
 <div class="container move">
     <h1>Account Settings</h1>

@@ -19,17 +19,27 @@ class HomePageTest extends TestCase
              ->see('Schoo');
     }
 
+    /**
+     * Dont see logout on main page
+     * */
     public function testLogoutIsNotOnPage()
     {
           $this->visit('/')
                ->dontSeeLink('Logout');
     }
+
+    /**
+     * Test courses can be viewed on landing page
+     * */
     public function testCoursesArePresent()
     {
           $this->visit('/');
           $this->assertViewHas('courses');
     }
 
+    /**
+     * Test other things on main page
+     * */
     public function testOtherThingsOnHome()
     {
         $this->visit('/')

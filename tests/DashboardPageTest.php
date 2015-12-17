@@ -8,6 +8,9 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class DashboardPageTest extends TestCase
 {
+    /**
+     * test dashboard using ModelFactory
+     **/
     public function testDashboardLoads()
     {
         $user = factory(\Schoo\User::class)->create();
@@ -15,6 +18,10 @@ class DashboardPageTest extends TestCase
         $this->call('GET', '/courses');
         $this->assertResponseOk();
     }
+
+    /**
+     * Test user details on dashboard
+     * */
     public function testUserDetailsLoadOnDashboard()
     {
         $user = factory(\Schoo\User::class)->create();
@@ -23,6 +30,10 @@ class DashboardPageTest extends TestCase
         $this->seePageIs('/courses');
         $this->assertViewHas([]);
     }
+
+    /**
+     * Test courses show on dashboard
+     * */
     public function testCoursesLoadOnPage()
     {
         $user = factory(\Schoo\User::class)->create();

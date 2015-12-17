@@ -1,5 +1,5 @@
-<-- error 404 page -->
 @extends('layouts.master')
+<!-- error 404 page -->
 @section('title', 'Schoo | Error 404')
 @section('content')
 <div class="jumbotron move2">
