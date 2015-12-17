@@ -6,6 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="_token" content="{{ csrf_token() }}" />
+    <meta name="description" content="Learning Management System">
+    <meta name="keywords" content="Laravel, LMS, Learning, Video Sharing">
+    <meta name="author" content="Surajudeen Akande">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ secure_asset('images/favicon-32x32.png') }}">
     <!-- Material Design fonts -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
