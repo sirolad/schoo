@@ -2,27 +2,25 @@
 
 namespace Schoo\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use Auth;
 use Alert;
-use Redirect;
-use Validator;
-use Schoo\User;
-use Schoo\Course;
-use Schoo\Http\Requests;
+use Auth;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use Schoo\Http\Controllers\Controller;
+use Redirect;
+use Schoo\Course;
+use Schoo\User;
+use Validator;
 
 class CourseController extends Controller
 {
     /**
-     * handles authenticate middleware
+     * handles authenticate middleware.
      */
     public function __construct()
     {
-        $this->middleware('auth',['except' => 'show']);
+        $this->middleware('auth', ['except' => 'show']);
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -38,7 +36,8 @@ class CourseController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -47,16 +46,16 @@ class CourseController extends Controller
             'course'      => 'required',
             'description' => 'required|min:15',
             'url'         => 'required|url',
-            'section'     => 'required'
+            'section'     => 'required',
         ]);
 
-        if($validator->fails()) {
-            Alert::error('Oops','Invalid Inputs');
+        if ($validator->fails()) {
+            Alert::error('Oops', 'Invalid Inputs');
 
             return redirect('/courses');
         }
 
-        $course = new Course;
+        $course = new Course();
 
         if (Course::where('course', '=', $request->get('course'))->exists()) {
             Alert::warning('Oops', 'Course Already Exists');
@@ -85,7 +84,8 @@ class CourseController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
+     *
      * @return \Illuminate\Http\Response
      */
     public function show($slug)
@@ -103,7 +103,8 @@ class CourseController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
+     *
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -120,8 +121,9 @@ class CourseController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int                      $id
+     *
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -137,7 +139,8 @@ class CourseController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
+     *
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -146,15 +149,17 @@ class CourseController extends Controller
         if ($course) {
             $course->delete();
 
-            return [ 'status_code' => 200, 'message' => 'Course deleted successfully'];
+            return ['status_code' => 200, 'message' => 'Course deleted successfully'];
         }
         abort(404);
     }
 
     /**
-     * Get Youtube video id from url
+     * Get Youtube video id from url.
+     *
      * @param   string url
-     * @return  string
+     *
+     * @return string
      */
     public function getVideoId($url)
     {
@@ -164,20 +169,23 @@ class CourseController extends Controller
     }
 
     /**
-     * Validate the existence of a resource video
+     * Validate the existence of a resource video.
      *
      * @param $videoID Youtube ID supplied by those posting
+     *
      * @return bool
      */
     protected function youtubeExist($videoID)
     {
         $theURL = "http://www.youtube.com/oembed?url=http://www.youtube.com/watch?v=$videoID&format=json";
         $headers = get_headers($theURL);
-        return (substr($headers[0], 9, 3) !== "404") ? true : false;
+
+        return (substr($headers[0], 9, 3) !== '404') ? true : false;
     }
 
     /**
-     * View to all courses for authenticated user
+     * View to all courses for authenticated user.
+     *
      * @return void
      */
     public function getAllCourses()

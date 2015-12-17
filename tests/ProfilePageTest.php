@@ -1,13 +1,10 @@
 <?php
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ProfilePageTest extends TestCase
 {
     /**
-     * Check profile page loads
+     * Check profile page loads.
      * */
     public function testEditProfilePageLoadsCorrectly()
     {
@@ -20,15 +17,15 @@ class ProfilePageTest extends TestCase
         $this->assertResponseOk();
     }
 
-     /**
-     * Create User to test profile page functionality
+    /**
+     * Create User to test profile page functionality.
      * */
     private function createUser()
     {
         return User::create([
-          'name' => 'johndoe',
-          'email' => 'john@doe.com',
-          'password' => md5('password')
+          'name'     => 'johndoe',
+          'email'    => 'john@doe.com',
+          'password' => md5('password'),
         ]);
     }
 }

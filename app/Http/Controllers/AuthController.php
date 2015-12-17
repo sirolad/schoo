@@ -2,16 +2,14 @@
 
 namespace Schoo\Http\Controllers;
 
-use Auth;
 use Alert;
-use Redirect;
-use Socialite;
-use Schoo\User;
-use Schoo\Http\Requests;
-use Illuminate\Http\Request;
-use Schoo\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Auth;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Illuminate\Http\Request;
+use Redirect;
+use Schoo\User;
+use Socialite;
 
 class AuthController extends Controller
 {
@@ -50,9 +48,10 @@ class AuthController extends Controller
     }
 
     /**
-     * Register a new Learner
+     * Register a new Learner.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function postRegister(Request $request)
@@ -78,7 +77,7 @@ class AuthController extends Controller
         $user = User::create([
             'username' => $request->input('username'),
             'email'    => $request->input('email'),
-            'password' => md5($request->input('password'))
+            'password' => md5($request->input('password')),
         ]);
 
         Auth::login($user);
@@ -88,27 +87,30 @@ class AuthController extends Controller
     }
 
     /**
-     * Logs out an authentiacated user
+     * Logs out an authentiacated user.
+     *
      * @return \Illuminate\Http\Response
      */
     public function getLogOut()
     {
         Auth::logout();
-        Alert::success('See you again!','miss you');
+        Alert::success('See you again!', 'miss you');
 
         return redirect()->route('index');
     }
 
     /**
-     * Enables a user to log in using email or username
-     * @param  Request $request
+     * Enables a user to log in using email or username.
+     *
+     * @param Request $request
+     *
      * @return void
      */
     public function postLogin(Request $request)
     {
-        $field = filter_var($request['email'], FILTER_VALIDATE_EMAIL) ? "email" : "username";
+        $field = filter_var($request['email'], FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
         $user = User::where($field, $request['email'])->first();
-        if (! is_null($user)) {
+        if (!is_null($user)) {
             if ($user->password == md5($request['password'])) {
                 $request->has('remember') ? Auth::login($user, true) : Auth::login($user);
                 Alert::success('Welcome Back', $user->username);
@@ -116,27 +118,28 @@ class AuthController extends Controller
                 return redirect('/courses');
             }
         }
-        Alert::error('Oops','Login Failed');
+        Alert::error('Oops', 'Login Failed');
 
         return redirect()->back();
     }
 
     /**
-     *  Redirects to provider authentication page
+     *  Redirects to provider authentication page.
      */
     public function redirectToProvider($provider)
     {
         return Socialite::driver($provider)->redirect();
     }
+
     /**
-     *  Logs in user with their social media credentials
+     *  Logs in user with their social media credentials.
      */
     public function handleProviderCallback($provider)
     {
         try {
             $user = Socialite::driver($provider)->user();
         } catch (Exception $e) {
-            return Redirect::to('auth/' . $provider);
+            return Redirect::to('auth/'.$provider);
         }
         $authUser = $this->findOrCreateUser($user, $provider);
         Auth::loginUsingId($authUser->id, true);
@@ -144,26 +147,28 @@ class AuthController extends Controller
 
         return Redirect::to($this->redirectTo);
     }
+
     /**
-     * checks if user exists then creates new if user does not exist
+     * checks if user exists then creates new if user does not exist.
      */
     private function findOrCreateUser($theUser, $provider)
     {
-      $authUser = User::where('uid', $theUser->id)->first();
-      $username = isset($theUser->user['first_name']) ? $theUser->user['first_name'] : $theUser->nickname;
-      if ($authUser) {
-          return $authUser;
-      }
-      if (User::where('username', $theUser->nickname)->first()) {
-          $user = factory(User::class)->make([
+        $authUser = User::where('uid', $theUser->id)->first();
+        $username = isset($theUser->user['first_name']) ? $theUser->user['first_name'] : $theUser->nickname;
+        if ($authUser) {
+            return $authUser;
+        }
+        if (User::where('username', $theUser->nickname)->first()) {
+            $user = factory(User::class)->make([
               'username'    => $username,
               'email'       => $theUser->email,
               'provider'    => $provider,
               'uid'         => $theUser->id,
               'avatar_url'  => $theUser->avatar,
           ]);
-      }
-      return User::create([
+        }
+
+        return User::create([
           'username'   => $username,
           'email'      => $theUser->email,
           'provider'   => $provider,

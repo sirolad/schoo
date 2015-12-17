@@ -1,13 +1,10 @@
 <?php
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class RegistrationPageTest extends TestCase
 {
     /**
-     * Check registration page
+     * Check registration page.
      * */
     public function testRegistrationPageLoadsCorrectly()
     {
@@ -16,7 +13,7 @@ class RegistrationPageTest extends TestCase
     }
 
     /**
-     * Check content of registration page
+     * Check content of registration page.
      * */
     public function testRegistrationPageHasRightContent()
     {
@@ -27,7 +24,7 @@ class RegistrationPageTest extends TestCase
     }
 
     /**
-     * check no logout on registration
+     * check no logout on registration.
      * */
     public function testRegistrationPageHasNoHomeLink()
     {
@@ -36,7 +33,7 @@ class RegistrationPageTest extends TestCase
     }
 
     /**
-     * check no logout on registration page
+     * check no logout on registration page.
      * */
     public function testRegistrationPageHasNoLogoutLink()
     {
@@ -45,7 +42,7 @@ class RegistrationPageTest extends TestCase
     }
 
     /**
-     * test registration works
+     * test registration works.
      * */
     public function testRegisterPageWorksCorrectly()
     {
@@ -55,6 +52,6 @@ class RegistrationPageTest extends TestCase
             ->type('password', 'password')
             ->press('Sign Up')
             ->seePageIs('/courses')
-            ->seeInDatabase('users', ['username' =>'johndoe']);
+            ->seeInDatabase('users', ['username' => 'johndoe']);
     }
 }

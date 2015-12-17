@@ -36,20 +36,20 @@ return [
     ],
 
     'twitter' => [
-        'client_id' => env('TWITTER_ID'),
+        'client_id'     => env('TWITTER_ID'),
         'client_secret' => env('TWITTER_SECRET'),
-        'redirect' => env('TWITTER_URL'),
+        'redirect'      => env('TWITTER_URL'),
     ],
 
      'facebook' => [
-        'client_id' => env('FACEBOOK_ID'),
+        'client_id'     => env('FACEBOOK_ID'),
         'client_secret' => env('FACEBOOK_SECRET'),
-        'redirect' => env('FACEBOOK_URL'),
+        'redirect'      => env('FACEBOOK_URL'),
     ],
 
      'github' => [
-        'client_id' => env('GITHUB_ID'),
+        'client_id'     => env('GITHUB_ID'),
         'client_secret' => env('GITHUB_SECRET'),
-        'redirect' => env('GITHUB_URL'),
+        'redirect'      => env('GITHUB_URL'),
     ],
 ];

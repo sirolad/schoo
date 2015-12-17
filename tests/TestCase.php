@@ -26,7 +26,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
     }
 
     /**
-     * Test constructor
+     * Test constructor.
      */
     public function setUp()
     {
@@ -35,7 +35,8 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
     }
 
     /**
-     * Database Configuration
+     * Database Configuration.
+     *
      * @return [type] [description]
      */
     public function prepareForTests()

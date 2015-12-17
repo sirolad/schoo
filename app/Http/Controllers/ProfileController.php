@@ -2,14 +2,12 @@
 
 namespace Schoo\Http\Controllers;
 
-use Auth;
 use Alert;
-use Redirect;
+use Auth;
 use Cloudder;
-use Schoo\User;
-use Schoo\Http\Requests;
 use Illuminate\Http\Request;
-use Schoo\Http\Controllers\Controller;
+use Redirect;
+use Schoo\User;
 
 class ProfileController extends Controller
 {
@@ -26,12 +24,13 @@ class ProfileController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
+     *
      * @return \Illuminate\Http\Response
      */
     public function edit(Request $request)
     {
-        $input = $request->except('_token','url');
+        $input = $request->except('_token', 'url');
 
         if (User::where('username', '=', $request->get('username'))->exists()) {
             $input = $request->except('username', '_token', 'url');
@@ -50,8 +49,9 @@ class ProfileController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int                      $id
+     *
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request)
@@ -64,7 +64,7 @@ class ProfileController extends Controller
 
             User::find(Auth::user()->id)->updateAvatar($imgurl);
 
-            Alert::success('Good','Avatar updated successfully');
+            Alert::success('Good', 'Avatar updated successfully');
 
             return redirect('/courses');
         }

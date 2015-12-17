@@ -1,13 +1,10 @@
 <?php
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class DashboardPageTest extends TestCase
 {
     /**
-     * test dashboard using ModelFactory
+     * test dashboard using ModelFactory.
      **/
     public function testDashboardLoads()
     {
@@ -18,7 +15,7 @@ class DashboardPageTest extends TestCase
     }
 
     /**
-     * Test user details on dashboard
+     * Test user details on dashboard.
      * */
     public function testUserDetailsLoadOnDashboard()
     {
@@ -30,7 +27,7 @@ class DashboardPageTest extends TestCase
     }
 
     /**
-     * Test courses show on dashboard
+     * Test courses show on dashboard.
      * */
     public function testCoursesLoadOnPage()
     {
