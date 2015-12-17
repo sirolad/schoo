@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    // Set up token to enable delete action
     $.ajaxSetup({
         headers: {
             "X-CSRF-Token": $("meta[name=_token").attr("content")
@@ -7,6 +8,7 @@ $(document).ready(function() {
   // This command is used to initialize some elements and make them work properly
   $.material.init();
 
+  // delete action button
   $('.delete').on('click', function(){
     var token = $(this).attr('data-token');
     var id = $(this).attr('data-id');
@@ -18,12 +20,15 @@ $(document).ready(function() {
     alertMethod(URL, data);
   });
 
+// toggle on dashboard button
   $("#menu-toggle").click(function(e) {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
   });
 
 });
+
+// sweetalert for delete
 function alertMethod(route, data)
 {
     swal({
@@ -41,6 +46,8 @@ function alertMethod(route, data)
         }
       });
 }
+
+// Ajax process handling delete
 function processAjax (URL, data)
 {
     $.ajax({
