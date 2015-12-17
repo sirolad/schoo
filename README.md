@@ -1,6 +1,9 @@
 # Schoo
 
 [![Build Status](https://travis-ci.org/andela-sakande/schoo.svg)](https://travis-ci.org/andela-sakande/schoo)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/andela-sakande/schoo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/andela-sakande/schoo/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/andela-sakande/schoo/badges/build.png?b=master)](https://scrutinizer-ci.com/g/andela-sakande/schoo/build-status/master)
+[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/andela-sakande/PotatoORM/blob/master/LICENSE)
 
 Schoo is an Awesome Simple Learning Management System which enable individuals to share stuffs easily
 thereby making everyone better by learning from wonderful people on an easy-to-use platform.
