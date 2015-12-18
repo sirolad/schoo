@@ -55,7 +55,7 @@ AuthenticatableContract,
      */
     public function getAvatar()
     {
-        return (!is_null($this->avatar_url)) ? $this->avatar_url : $this->getAvatarFromGravatar();
+        return (! is_null($this->avatar_url)) ? $this->avatar_url : $this->getAvatarFromGravatar();
     }
 
     /**
@@ -68,7 +68,7 @@ AuthenticatableContract,
     public function updateProfile($formData)
     {
         foreach ($formData as $key => $value) {
-            if (!empty($value)) {
+            if (! empty($value)) {
                 $this->$key = $value;
             }
         }

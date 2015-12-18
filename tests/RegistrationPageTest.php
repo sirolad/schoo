@@ -44,7 +44,7 @@ class RegistrationPageTest extends TestCase
     /**
      * test registration works.
      * */
-    public function testRegisterPageWorksCorrectly()
+    public function testRegistrationFunctionalityWorksCorrectly()
     {
         $this->visit('/signup')
             ->type('johndoe', 'username')

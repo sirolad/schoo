@@ -12,8 +12,8 @@
     padding:25px;
     width: 100%;
     min-height:200px;
-    background-color: #3f51b5;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     font-size: 12px;
     position: relative;
     bottom: 0px;
@@ -24,6 +24,11 @@
     min-height: 50px;
     margin-bottom: 0px;
     border: 1px solid transparent;
+}
+
+.navbar.navbar-inverse {
+    background-color: #fff;
+    color: #3f51b5;
 }
 
 .navbar-brand {

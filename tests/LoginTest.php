@@ -39,7 +39,7 @@ class LoginTest extends TestCase
     /**
      * test login works.
      * */
-    public function testLoginPageWorksCorrectly()
+    public function testLoginWorksCorrectly()
     {
         $this->createUser();
         $this->visit('/login')

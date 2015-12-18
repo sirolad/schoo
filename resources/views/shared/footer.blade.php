@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
-        <img src="http://res.cloudinary.com/dqmv6brld/image/upload/v1450190511/Screen_Shot_2015-12-15_at_3.39.56_PM_rkag9i.png" class="img-responsive">
+        <img src="http://res.cloudinary.com/dqmv6brld/image/upload/v1450439012/navbar_xo63bk.gif" class="img-responsive">
       </div>
       <div class="col-sm-4">
         <br>

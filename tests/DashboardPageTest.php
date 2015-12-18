@@ -6,7 +6,7 @@ class DashboardPageTest extends TestCase
     /**
      * test dashboard using ModelFactory.
      **/
-    public function testDashboardLoads()
+    public function testDashboardLoadsCorrectly()
     {
         $user = factory(\Schoo\User::class)->create();
         $this->actingAs($user);
@@ -29,7 +29,7 @@ class DashboardPageTest extends TestCase
     /**
      * Test courses show on dashboard.
      * */
-    public function testCoursesLoadOnPage()
+    public function testCoursesLoadOnDashboardSuccessfully()
     {
         $user = factory(\Schoo\User::class)->create();
         $this->actingAs($user);

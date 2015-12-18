@@ -135,17 +135,19 @@
                   </div>
                 </div>
                 </fieldset>
+                <button type="submit" class="btn btn-primary btn-raised" id="create">Create</button>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        </form>
         </div>
         <div class="modal-footer">
           <div class="form-group">
               <div class="col-md-10 col-md-offset-2">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-primary btn-raised">Create</button>
+
               </div>
             </div>
         </div>
-        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        </form>
+
       </div>
 
     </div>
