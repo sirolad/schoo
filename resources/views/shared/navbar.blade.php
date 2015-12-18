@@ -20,7 +20,7 @@
             <li><a href="/software-development">Software Development</a></li>
             <li><a href="/personal-development">Personal Development</a></li>
             <li><a href="/languages">Languages</a></li>
-            <li><a href="/general-knowledge">General Knowlegde</a></li>
+            <li><a href="/general-knowledge">General Knowledge</a></li>
           </ul>
         </li>
       </ul>
