@@ -141,17 +141,21 @@ modal-color: yellow;
   .carousel-inner > .item > a > img {
       width: 100%;
       margin: auto;
-      height: 515px;
+      height: 580px;
+
+}
+
+.cover {
+  object-fit: cover;
+  width: 50px;
+  height: 100px;
 }
 
 .carousel-inner>.item>img {
     line-height: 1;
 }
 
-/*.carousel-inner {
-    height: 515px;
-}
-*/
+
 .jumbotron {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -199,6 +203,9 @@ modal-color: yellow;
     color: #3f51b5;
 }
 
+.services h2 {
+    color: #3f51b5;
+}
 .back {
     background-image: url('http://res.cloudinary.com/dqmv6brld/image/upload/v1450193683/images7_lq3jtr.jpg');
 }
@@ -270,12 +277,12 @@ font-size: 18px;
     color: rgba(255,255,255, 0.84);
 }
 
-.form-control, .form-group .form-control {
+.form-control, .form-group.is-focused .form-control {
     border: 0;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#3f51b5), to(#3f51b5)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
     background-image: -webkit-linear-gradient(#3f51b5, #3f51b5), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
-    background-image: -o-linear-gradient(#3f51b5, #3f51b5), -o-linear-gradient(#D2D2D2, #D2D2D2);
-    background-image: linear-gradient(#3f51b5, #3f51b5), linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: -o-linear-gradient(#3f51b5, #3f51b5), -o-linear-gradient(#3f51b5, #3f51b5);
+    background-image: linear-gradient(#3f51b5, #3f51b5), linear-gradient(#3f51b5, #3f51b5);
     -webkit-background-size: 0 2px, 100% 1px;
     background-size: 0 2px, 100% 1px;
     background-repeat: no-repeat;
@@ -289,4 +296,36 @@ font-size: 18px;
     -webkit-box-shadow: none;
     box-shadow: none;
     border-radius: 0;
+}
+
+.form-group.is-focused label.control-label {
+    font-size: 12px;
+    line-height: 1.07142857;
+    color: #3f51b5;
+    font-weight: 400;
+    margin: 16px 0 0 0;
+}
+
+.navbar .btn, .input-group-btn .btn {
+    border: none;
+    border-radius: 2px;
+    position: relative;
+    padding: 8px 30px;
+    margin: 10px 1px;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    will-change: box-shadow, transform;
+    -webkit-transition: -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    background: transparent;
+}
+
+a, a:hover, a:focus {
+    color: #3f51b5;
 }
