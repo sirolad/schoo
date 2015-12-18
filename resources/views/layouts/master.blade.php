@@ -9,7 +9,7 @@
     <meta name="description" content="Learning Management System">
     <meta name="keywords" content="Laravel, LMS, Learning, Video Sharing">
     <meta name="author" content="Surajudeen Akande">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ load_asset('images/favicon-32x32.png') }}">
     <!-- Material Design fonts -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -18,13 +18,13 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Material Design -->
-    <link href="{{ asset('css/bootstrap-material-design.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/ripples.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap-social.css') }}" rel="stylesheet">
+    <link href="{{ load_asset('css/bootstrap-material-design.css') }}" rel="stylesheet">
+    <link href="{{ load_asset('css/ripples.min.css') }}" rel="stylesheet">
+    <link href="{{ load_asset('css/bootstrap-social.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/sweetalert.css') }}">
-    <link href="{{ asset('css/simple-sidebar.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ load_asset('css/sweetalert.css') }}">
+    <link href="{{ load_asset('css/simple-sidebar.css') }}" rel="stylesheet">
+    <link href="{{ load_asset('css/style.css') }}" rel="stylesheet">
     @yield('custom-css')
 </head>
 <body>
