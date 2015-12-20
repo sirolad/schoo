@@ -51,7 +51,7 @@ class RegistrationPageTest extends TestCase
             ->type('john@doe.com', 'email')
             ->type('password', 'password')
             ->press('Sign Up')
-            ->seePageIs('/courses')
+            ->seePageIs('/dashboard')
             ->seeInDatabase('users', ['username' => 'johndoe']);
     }
 }

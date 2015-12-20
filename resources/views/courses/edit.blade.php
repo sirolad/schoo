@@ -41,7 +41,7 @@
                     <div class="col-md-8">
                         <input type="submit" class="btn btn-primary btn-raised" value="Save Changes">
                         <span></span>
-                        <a href="/courses" class="btn btn-default" value="Go Back" >Go Back</a>
+                        <a href="/dashboard" class="btn btn-default" value="Go Back" >Go Back</a>
                     </div>
                 </div>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
