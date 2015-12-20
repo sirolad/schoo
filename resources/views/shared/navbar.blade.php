@@ -37,7 +37,7 @@
               {{ Auth::user()->username }}
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/courses"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Dashboard</a></li>
+            <li><a href="/dashboard"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Dashboard</a></li>
             <li><a href="/profile"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Account Settings</a></li>
             <li><a href="/logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Log out</a></li>
           </ul>
