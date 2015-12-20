@@ -47,7 +47,7 @@ class LoginTest extends TestCase
             ->type('password', ('password'))
             ->check('remember')
             ->press('Log In')
-            ->seePageIs('/courses');
+            ->seePageIs('/dashboard');
     }
 
     /**

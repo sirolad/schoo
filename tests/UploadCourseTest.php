@@ -26,7 +26,7 @@ class UploadCourseTest extends TestCase
           ->withSession(['name' => 'johndoe'])
           ->visit('/courses');
 
-        $this->createUser();
+        //$this->createUser();
         $this->click('library_add');
         $this->type('git', 'course')
             ->type('some random text', 'description')
