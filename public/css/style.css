@@ -13,7 +13,7 @@
     width: 100%;
     min-height:200px;
     background-color: #fff;
-    color: #000;
+    color: #3f51b5;
     font-size: 12px;
     position: relative;
     bottom: 0px;
@@ -29,6 +29,7 @@
 .navbar.navbar-inverse {
     background-color: #fff;
     color: #3f51b5;
+    opacity: 0.9;
 }
 
 .navbar-brand {
@@ -43,7 +44,7 @@ body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
     line-height: 1.42857143;
-    color: #333;
+    color: #3f51b5;
     background-color: #f7f8fc;
 }
 
@@ -246,7 +247,7 @@ modal-color: yellow;
 }
 
 .social i:hover {
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
     transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
@@ -327,5 +328,44 @@ font-size: 18px;
 }
 
 a, a:hover, a:focus {
+    color: #3f51b5;
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox-material .check {
+    color: #3f51b5;
+    border-color: #3f51b5;
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox-material .check:before {
+    color: #3f51b5;
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+    -webkit-animation: checkbox-on 0.3s forwards;
+    -o-animation: checkbox-on 0.3s forwards;
+    animation: checkbox-on 0.3s forwards;
+}
+
+.soc .btn:not(.btn-raised), .input-group-btn .btn:not(.btn-raised), .btn:not(.btn-raised).btn-default, .input-group-btn .btn:not(.btn-raised).btn-default {
+    color: #fff;
+    font-weight: 400px;
+}
+
+.soc .btn-block .btn-social .btn-lg a:hover {
+    background-color: #000;
+}
+
+.btn:not(.btn-raised), .input-group-btn .btn:not(.btn-raised), .btn:not(.btn-raised).btn-default, .input-group-btn .btn:not(.btn-raised).btn-default {
+    color: #000;
+}
+
+.some h3 {
+    color: #3f51b5;
+}
+
+section strong {
+    color: #000;
+}
+
+legend {
     color: #3f51b5;
 }

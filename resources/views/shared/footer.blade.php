@@ -11,7 +11,7 @@
         <br>
         <br>
         <h3>Contact Us</h2>
-        <code>surajudeen.akande@andela.com</code>
+        <h5><span class="glyphicon glyphicon-envelope"></span> surajudeen.akande@andela.com</h5>
         <br>
         <br>
         <p>&copy Sirolad | 2015</p>

@@ -8,7 +8,6 @@
 @endsection
 @section('content')
 <div>
-  <h2>Activate Carousel with JavaScript</h2>
   <div id="myCarousel" class="carousel slide">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -77,7 +76,7 @@
 </div>
 <div class="container">
   <br>
-  <h3 style="text-align: center">Featured Courses</h3>
+  <h3 style="text-align: center" class="some">Featured Courses</h3>
   <div class="row previews">
     @if($courses)
         @foreach($courses as $course)
