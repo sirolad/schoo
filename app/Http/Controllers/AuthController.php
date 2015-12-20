@@ -15,7 +15,7 @@ class AuthController extends Controller
 {
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
-    protected $redirectTo = '/courses';
+    protected $redirectTo = '/dashboard';
 
     /**
      * Create a new authentication controller instance.
@@ -83,7 +83,7 @@ class AuthController extends Controller
         Auth::login($user);
         Alert::success('You have successfully signed in!');
 
-        return redirect()->to('/courses');
+        return redirect()->to('/dashboard');
     }
 
     /**
@@ -115,7 +115,7 @@ class AuthController extends Controller
                 $request->has('remember') ? Auth::login($user, true) : Auth::login($user);
                 Alert::success('Welcome Back', $user->username);
 
-                return redirect('/courses');
+                return redirect('/dashboard');
             }
         }
         Alert::error('Oops', 'Login Failed');
