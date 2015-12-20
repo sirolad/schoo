@@ -33,7 +33,7 @@
          <input type="hidden" name="_token" value="{{ csrf_token() }}">
         </form>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 soc">
         <legend>Sign Up with Social Media</legend>
         <br>
         <br>
