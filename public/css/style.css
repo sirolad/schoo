@@ -369,3 +369,19 @@ section strong {
 legend {
     color: #3f51b5;
 }
+
+input::-webkit-input-placeholder {
+color: #3f51b5 !important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+color: #3f51b5 !important;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+color: #3f51b5 !important;
+}
+
+input:-ms-input-placeholder {
+color: #3f51b5 !important;
+}
