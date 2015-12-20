@@ -371,19 +371,19 @@ legend {
 }
 
 input::-webkit-input-placeholder {
-color: #3f51b5 !important;
+color: #ccedfc !important;
 }
 
 input:-moz-placeholder { /* Firefox 18- */
-color: #3f51b5 !important;
+color: #ccedfc !important;
 }
 
 input::-moz-placeholder {  /* Firefox 19+ */
-color: #3f51b5 !important;
+color: #ccedfc !important;
 }
 
 input:-ms-input-placeholder {
-color: #3f51b5 !important;
+color: #ccedfc !important;
 }
 
 .btn-twitter:hover {
@@ -397,3 +397,11 @@ color: #3f51b5 !important;
 .btn-github:hover {
     background-color: #3f51b5 !important;
 }
+
+@media (max-width: 1250px) {
+  .modal-dialog {
+    width: 400px;
+    }
+}
+
+

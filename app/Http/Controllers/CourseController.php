@@ -52,7 +52,7 @@ class CourseController extends Controller
         if ($validator->fails()) {
             Alert::error('Oops', 'Invalid Inputs');
 
-            return redirect('/courses');
+            return redirect('/dashboard');
         }
 
         $course = new Course();
