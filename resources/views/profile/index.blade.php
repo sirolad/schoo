@@ -9,7 +9,7 @@
         <div class="col-md-3">
             <div class="text-center">
             <form  method="POST" action="/profile/avatar" enctype="multipart/form-data">
-                <img src="{{ Auth::user()->avatar_url }}" class="avatar2 img-circle" alt="avatar">
+                <img src="{{ Auth::user()->getAvatar() }}" class="avatar2 img-circle" alt="avatar">
                 <div class="form-group">
                     <label for="inputFile" class="col-md-2 control-label">Avatar</label>
                     <div class="col-md-10">
