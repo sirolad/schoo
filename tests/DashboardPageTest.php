@@ -8,9 +8,7 @@ class DashboardPageTest extends TestCase
      **/
     public function testDashboardLoadsCorrectly()
     {
-        $user = factory(\Schoo\User::class)->create();
-        $this->actingAs($user);
-        $this->call('GET', '/dashboard');
+        $this->loginAUser();
         $this->assertResponseOk();
     }
 
@@ -19,11 +17,20 @@ class DashboardPageTest extends TestCase
      * */
     public function testUserDetailsLoadOnDashboard()
     {
+        $this->loginAUser();
+        $this->seePageIs('/dashboard');
+        $this->assertViewHas('user');
+    }
+
+    /**
+     * [loginAUser description]
+     * @return [type] [description]
+     */
+    public function loginAUser()
+    {
         $user = factory(\Schoo\User::class)->create();
         $this->actingAs($user);
         $this->call('GET', '/dashboard');
-        $this->seePageIs('/dashboard');
-        $this->assertViewHas([]);
     }
 
     /**
@@ -31,9 +38,7 @@ class DashboardPageTest extends TestCase
      * */
     public function testCoursesLoadOnDashboardSuccessfully()
     {
-        $user = factory(\Schoo\User::class)->create();
-        $this->actingAs($user);
-        $this->call('GET', '/dashboard');
+        $this->loginAUser();
         $this->seePageIs('/dashboard');
         $this->assertViewHas('courses');
     }

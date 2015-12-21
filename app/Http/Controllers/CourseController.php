@@ -28,9 +28,10 @@ class CourseController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
         $courses = Course::orderBy('created_at', 'desc')->personal()->paginate(20);
 
-        return view('courses.index')->withCourses($courses);
+        return view('courses.index')->withCourses($courses)->withUser($user);
     }
 
     /**
