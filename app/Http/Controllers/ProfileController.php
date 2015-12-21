@@ -43,7 +43,7 @@ class ProfileController extends Controller
         User::find(Auth::user()->id)->updateProfile($input);
         Alert::success('Good', 'You have successfully updated your profile');
 
-        return redirect('/courses');
+        return redirect('/dashboard');
     }
 
     /**

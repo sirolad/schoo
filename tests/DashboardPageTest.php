@@ -10,7 +10,7 @@ class DashboardPageTest extends TestCase
     {
         $user = factory(\Schoo\User::class)->create();
         $this->actingAs($user);
-        $this->call('GET', '/courses');
+        $this->call('GET', '/dashboard');
         $this->assertResponseOk();
     }
 
@@ -21,8 +21,8 @@ class DashboardPageTest extends TestCase
     {
         $user = factory(\Schoo\User::class)->create();
         $this->actingAs($user);
-        $this->call('GET', '/courses');
-        $this->seePageIs('/courses');
+        $this->call('GET', '/dashboard');
+        $this->seePageIs('/dashboard');
         $this->assertViewHas([]);
     }
 
@@ -33,8 +33,8 @@ class DashboardPageTest extends TestCase
     {
         $user = factory(\Schoo\User::class)->create();
         $this->actingAs($user);
-        $this->call('GET', '/courses');
-        $this->seePageIs('/courses');
+        $this->call('GET', '/dashboard');
+        $this->seePageIs('/dashboard');
         $this->assertViewHas('courses');
     }
 }

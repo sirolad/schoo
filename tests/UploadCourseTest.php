@@ -12,28 +12,26 @@ class UploadCourseTest extends TestCase
         $user = factory(\Schoo\User::class)->create();
         $this->actingAs($user)
             ->withSession(['name' => 'johndoe'])
-            ->visit('/courses')
+            ->visit('/dashboard')
             ->see('Schoo');
     }
 
     /**
      * Test upload.
      * */
-    public function testCourseUpload()
+    public function testCourseUploadSuccessfully()
     {
         $user = factory(\Schoo\User::class)->create();
         $this->actingAs($user)
           ->withSession(['name' => 'johndoe'])
-          ->visit('/courses');
-
-        //$this->createUser();
+          ->visit('/dashboard');
         $this->click('library_add');
         $this->type('git', 'course')
             ->type('some random text', 'description')
             ->type('https://www.youtube.com/watch?v=Dji9ALCgfpM', 'url')
             ->select('Languages', 'section')
-            //->findByNameOrId('#create')
             ->press('Create')
-            ->seePageIs('/courses');
+            ->seePageIs('/dashboard')
+            ->seeInDatabase('courses', ['course' => 'git']);
     }
 }

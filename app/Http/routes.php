@@ -40,7 +40,7 @@ Route::resource('courses', 'CourseController');
 Route::get('all-courses', 'CourseController@getAllCourses');
 Route::delete('courses/{id}/delete', 'CourseController@destroy');
 Route::get('courses/{slug}', 'CourseController@show');
-Route::get('/dashboard', 'CourseController@index');
+Route::get('/dashboard', ['uses' => 'CourseController@index', 'as' => 'courses.dashboard']);
 
 /* Profile Settings Route */
 Route::get('/profile', ['middleware' => 'auth', 'uses' => 'ProfileController@index']);
