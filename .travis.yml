@@ -11,15 +11,13 @@ matrix:
         - php: 7.0
         - php: hhvm
 
-install:
-  - curl -s http://getcomposer.org/installer | php
-  - php composer.phar install --dev --no-interaction
+before_script:
+ - wget http://getcomposer.org/composer.phar
+ - php composer.phar install --dev --no-interaction
+
 script:
-  - mkdir -p build/logs
-  - php vendor/bin/phpunit -c phpunit.xml.dist
+ - mkdir -p build/logs
+ - phpunit --coverage-clover build/logs/clover.xml
 
-
-after_success:
-  - travis_retry php vendor/bin/coveralls
-  # or enable logging
-  - travis_retry php vendor/bin/coveralls -v
+after_script:
+ - php vendor/bin/coveralls -v
