@@ -1,4 +1,4 @@
-# Schoo
+# School
 
 [![Build Status](https://travis-ci.org/andela-sakande/schoo.svg)](https://travis-ci.org/andela-sakande/schoo)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/andela-sakande/schoo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/andela-sakande/schoo/?branch=master)
@@ -6,7 +6,7 @@
 [![StyleCI](https://styleci.io/repos/47362848/shield)](https://styleci.io/repos/47362848)
 [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/andela-sakande/PotatoORM/blob/master/LICENSE)
 
-Schoo is an Awesome Simple Learning Management System which enable individuals to share stuffs easily
+School is an Awesome Simple Learning Management System which enable individuals to share stuffs easily
 thereby making everyone better by learning from wonderful people on an easy-to-use platform.
 
 ## Usage
@@ -51,7 +51,7 @@ Now you are set up and ready to run.
 
 * Other interesting features to be added soon
 
-Visit [Schoo demo page](https://schoo.herokuapp.com/) to view the project demo.
+Visit [School demo page](https://schoo.herokuapp.com/) to view the project demo.
 
 ## Change log
 
@@ -69,8 +69,8 @@ Please check out [CONTRIBUTING](CONTRIBUTING.md) file for detailed contribution 
 
 ## Credits
 
-Schoo is maintained by `Surajudeen AKANDE`.
+School is maintained by `Surajudeen AKANDE`.
 
 ## License
 
-Schoo is released under the MIT Licence. See the bundled [LICENSE](LICENSE.md) file for details.
+School is released under the MIT Licence. See the bundled [LICENSE](LICENSE.md) file for details.

@@ -59,5 +59,6 @@ class ProfilePageTest extends TestCase
         $this->login();
         $this->visit('/profile');
         $this->post('/profile/avatar', ['avatar' => ' /public/images/147.jpg']);
+        //$this->assertResponseOk();
     }
 }
