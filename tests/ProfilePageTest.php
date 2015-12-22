@@ -21,7 +21,6 @@ class ProfilePageTest extends TestCase
     {
         return User::create([
           'name'     => 'johndoe',
-          'username' => 'kola',
           'email'    => 'john@doe.com',
           'password' => md5('password'),
         ]);
@@ -59,6 +58,5 @@ class ProfilePageTest extends TestCase
         $this->login();
         $this->visit('/profile');
         $this->post('/profile/avatar', ['avatar' => ' /public/images/147.jpg']);
-        //$this->assertResponseOk();
     }
 }
