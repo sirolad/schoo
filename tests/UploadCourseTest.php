@@ -35,4 +35,34 @@ class UploadCourseTest extends TestCase
             ->seePageIs('/dashboard')
             ->seeInDatabase('courses', ['course' => 'git']);
     }
+
+    /**
+     * Test Invalid Course Input Fails
+     */
+    // public function testInvalidInputCantBeUploaded()
+    // {
+    //     $this->loginAUser();
+    //     $this->click('library_add');
+    //     $this->type('goat', 'course')
+    //         ->type('some', 'description')
+    //         ->type('google.com', 'url')
+    //         ->select('Computer Science', 'section')
+    //         ->press('Create')
+    //         ->seePageIs('/dashboard')
+    //         ->see("'Oops', 'Invalid Inputs'")
+    //         ->notSeeInDatabase('courses', ['course' => '']);
+    // }
+
+    /**
+     * [loginAUser description]
+     * @return [type] [description]
+     */
+    public function loginAUser()
+    {
+        $user = factory(\Schoo\User::class)->create();
+        $this->actingAs($user);
+        $this->call('GET', '/dashboard');
+    }
+
+
 }

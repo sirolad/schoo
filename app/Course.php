@@ -12,7 +12,7 @@ class Course extends Model
      *
      * @var array
      */
-    protected $fillable = ['course', 'description', 'url', 'section'];
+    protected $fillable = ['course', 'description', 'url', 'section', 'video_id', 'slug', 'user_id'];
 
     /**
      * many to one relationship
