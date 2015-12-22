@@ -25,8 +25,8 @@
             </div>
           <div class="form-group">
           <div class="col-md-10 col-md-offset-2">
-            <button type="reset" class="btn btn-default">Cancel</button>
             <button type="submit" class="btn btn-raised btn-primary">Sign Up</button>
+            <button type="reset" class="btn btn-default">Cancel</button>
           </div>
         </div>
         </fieldset>

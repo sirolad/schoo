@@ -1,6 +1,5 @@
 <?php
 
-
 class ProfilePageTest extends TestCase
 {
     /**
@@ -21,6 +20,7 @@ class ProfilePageTest extends TestCase
     {
         return User::create([
           'name'     => 'johndoe',
+          'username' => 'kola',
           'email'    => 'john@doe.com',
           'password' => md5('password'),
         ]);

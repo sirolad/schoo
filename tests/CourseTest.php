@@ -39,6 +39,17 @@ class CourseTest extends TestCase
     }
 
     /**
+     * [loginAUser description]
+     * @return [type] [description]
+     */
+    public function loginAUser()
+    {
+        $user = factory(\Schoo\User::class)->create();
+        $this->actingAs($user);
+        $this->call('GET', '/dashboard');
+    }
+
+    /**
      * Test  courses
      */
     public function testAllCoursesPageHasRightContent()
@@ -98,16 +109,5 @@ class CourseTest extends TestCase
              ->seePageIs('/courses/phone')
              ->see('See All Courses')
              ->seeInDatabase('courses', ['course' => 'phone']);
-    }
-
-    /**
-     * [loginAUser description]
-     * @return [type] [description]
-     */
-    public function loginAUser()
-    {
-        $user = factory(\Schoo\User::class)->create();
-        $this->actingAs($user);
-        $this->call('GET', '/dashboard');
     }
 }
