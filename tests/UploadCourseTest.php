@@ -36,9 +36,9 @@ class UploadCourseTest extends TestCase
             ->seeInDatabase('courses', ['course' => 'git']);
     }
 
-    /**
-     * Test Invalid Course Input Fails
-     */
+    // /**
+    //  * Test Invalid Course Input Fails
+    //  */
     // public function testInvalidInputCantBeUploaded()
     // {
     //     $this->loginAUser();

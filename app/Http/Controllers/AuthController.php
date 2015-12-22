@@ -164,7 +164,7 @@ class AuthController extends Controller
               'email'       => $theUser->email,
               'provider'    => $provider,
               'uid'         => $theUser->id,
-              'avatar_url'  => $theUser->avatar_original,
+              'avatar_url'  => $theUser->avatar,
           ]);
         }
 
@@ -173,7 +173,7 @@ class AuthController extends Controller
           'email'      => $theUser->email,
           'provider'   => $provider,
           'uid'        => $theUser->id,
-          'avatar_url' => $theUser->avatar_original,
+          'avatar_url' => $theUser->avatar,
       ]);
     }
 }
