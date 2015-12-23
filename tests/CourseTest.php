@@ -209,4 +209,18 @@ class CourseTest extends TestCase
         $this->notSeeInDatabase('courses', ['deleted_at' => null, 'id' => 1]);
     }
 
+    /**
+     * Test delete course
+     *
+     * @return void
+     */
+    public function testDeleteCourseFails()
+    {
+        Session::start();
+        $this->loginAUser();
+
+        $response = $this->call('DELETE', '/courses/1/delete', ['_token' => csrf_token()]);
+        $this->assertEquals(404, $response->getStatusCode());
+        $this->notSeeInDatabase('courses', ['deleted_at' => null, 'id' => 1]);
+    }
 }
