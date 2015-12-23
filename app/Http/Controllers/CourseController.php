@@ -74,11 +74,11 @@ class CourseController extends Controller
 
             Alert::success('Good', 'Course created successfully!');
 
-            return redirect()->route('courses.dashboard');
+            return redirect('/dashboard');
         } else {
             Alert::error('Oops', 'Only Youtube Videos are allowed!');
 
-            return redirect()->route('courses.dashboard');
+            return redirect('/dashboard');
         }
     }
 

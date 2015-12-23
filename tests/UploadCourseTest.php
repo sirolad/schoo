@@ -43,13 +43,13 @@ class UploadCourseTest extends TestCase
     // {
     //     $this->loginAUser();
     //     $this->click('library_add');
-    //     $this->type('goat', 'course')
-    //         ->type('some', 'description')
+    //     $this->type(1, 'user_id')
+    //         ->type('', 'course')
+    //         ->type('', 'description')
     //         ->type('google.com', 'url')
-    //         ->select('Computer Science', 'section')
+    //         ->select('', 'section')
     //         ->press('Create')
     //         ->seePageIs('/dashboard')
-    //         ->see("'Oops', 'Invalid Inputs'")
     //         ->notSeeInDatabase('courses', ['course' => '']);
     // }
 

@@ -140,13 +140,23 @@ class CourseTest extends TestCase
     // }
 
     /**
-     * Test Course can be deleted
+     * Test Course delete route
      *
      * @return void
      */
-    public function testOnlyLoggedUserCanDeleteCourse()
+    public function testOnlyLoggedInUserCanDelete()
     {
         $response = $this->call('DELETE', '/course/1/delete');
+
+        $this->assertEquals(500, $response->status());
+    }
+
+    /**
+     * Test Course edit route
+     */
+    public function testOnlyLoggedInUserCanEdit()
+    {
+        $response = $this->call('POST', '/course/1/edit');
 
         $this->assertEquals(500, $response->status());
     }

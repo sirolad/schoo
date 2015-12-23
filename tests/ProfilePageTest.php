@@ -33,6 +33,7 @@ class ProfilePageTest extends TestCase
           ->withSession(['name' => 'johndoe'])
           ->visit('/dashboard');
     }
+
     /**
      * test that profile is edited successfully
      */
@@ -57,6 +58,18 @@ class ProfilePageTest extends TestCase
     {
         $this->login();
         $this->visit('/profile');
-        $this->post('/profile/avatar', ['avatar' => ' /public/images/147.jpg']);
+        $this->call('POST', '/profile/avatar', ['avatar' => ' /public/images/147.jpg', '_token' => csrf_token() ]);
+    }
+
+    /**
+     * Test edit view has users
+     *
+     * @return void
+     */
+    public function testEditView()
+    {
+        $this->login();
+        $this->visit('/profile')
+             ->see('Account Settings');
     }
 }
