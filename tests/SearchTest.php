@@ -32,4 +32,14 @@ class SearchTest extends TestCase
 
        $this->call('POST', 'search', $credentials);
     }
+
+    /**
+     * Test result route
+     */
+    public function testSearchPageloads()
+    {
+        $response = $this->call('POST', '/search');
+
+        $this->assertEquals(302, $response->getStatusCode());
+    }
 }

@@ -14,7 +14,7 @@ class CourseTest extends TestCase
      * */
     public function createUser()
     {
-        User::create([
+        return User::create([
             'id'       => 1,
             'name'     => 'johndoe',
             'email'    => 'a@b.com',
@@ -113,13 +113,41 @@ class CourseTest extends TestCase
     }
 
     /**
-     * Test that Course can be viewed
+     * Test that unavailable Course cant be viewed
      */
     public function testUnavailableCourseReturns404()
     {
         $response = $this->call('GET', '/courses/solo');
 
         $this->assertEquals(404, $response->getStatusCode());
+    }
+
+    /**
+     * Test that selected course can be edited
+     */
+    public function testEditCourseRoute()
+    {
+        $response = $this->call('GET', '/courses/7/edit');
+
+        $this->assertEquals(302, $response->getStatusCode());
+    }
+
+   /**
+     * Test video edit
+     *
+     * @return void
+     */
+    public function testEditVideo()
+    {
+        $this->loginAUser();
+        $this->createUser();
+        $this->createCourse();
+
+        $this->visit('/courses/1/edit')
+             ->seePageIs('/courses/1/edit')
+             ->type('Latest Title', 'course')
+             ->press('Save Changes')
+             ->seeInDatabase('courses', ['course' => 'Latest Title']);
     }
 
     /**
