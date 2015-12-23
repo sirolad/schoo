@@ -160,4 +160,25 @@ class CourseTest extends TestCase
 
         $this->assertEquals(500, $response->status());
     }
+
+    /**
+     * Test Invalid Course Input Fails
+     */
+    public function testInvalidInputCantBeUploaded()
+    {
+        $user = factory(\Schoo\User::class)->create();
+        $this->actingAs($user)
+          ->withSession(['name' => 'johndoe'])
+          ->visit('/dashboard');
+
+        $this->click('library_add');
+        $this->type('', 'course')
+            ->type('', 'description')
+            ->type('rubbish', 'url')
+            ->select('Languages', 'section')
+            ->press('Create')
+            ->seePageIs('/dashboard')
+            ->notSeeInDatabase('courses', ['course' => '']);
+    }
+
 }

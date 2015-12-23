@@ -36,23 +36,6 @@ class UploadCourseTest extends TestCase
             ->seeInDatabase('courses', ['course' => 'git']);
     }
 
-    // /**
-    //  * Test Invalid Course Input Fails
-    //  */
-    // public function testInvalidInputCantBeUploaded()
-    // {
-    //     $this->loginAUser();
-    //     $this->click('library_add');
-    //     $this->type(1, 'user_id')
-    //         ->type('', 'course')
-    //         ->type('', 'description')
-    //         ->type('google.com', 'url')
-    //         ->select('', 'section')
-    //         ->press('Create')
-    //         ->seePageIs('/dashboard')
-    //         ->notSeeInDatabase('courses', ['course' => '']);
-    // }
-
     /**
      * [loginAUser description]
      * @return [type] [description]
