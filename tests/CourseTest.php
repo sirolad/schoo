@@ -27,7 +27,8 @@ class CourseTest extends TestCase
      * */
     public function createCourse()
     {
-        Course::create([
+        return Course::create([
+            'id' => 1,
             'course'     => 'phone',
             'description'    => 'something very good',
             'url' => 'Dji9ALCgfpM',
@@ -109,5 +110,44 @@ class CourseTest extends TestCase
              ->seePageIs('/courses/phone')
              ->see('See All Courses')
              ->seeInDatabase('courses', ['course' => 'phone']);
+    }
+
+    /**
+     * Test that Course can be viewed
+     */
+    public function testUnavailableCourseReturns404()
+    {
+        $response = $this->call('GET', '/courses/solo');
+
+        $this->assertEquals(404, $response->getStatusCode());
+    }
+
+    /**
+     * Test that Course can be viewed
+     */
+    // public function testThatCoursesCanbeEditedByCreator()
+    // {
+    //     $this->loginAUser();
+    //     $this->createCourse();
+
+    //     $this->visit('/dashboard')
+    //          ->see('phone')
+    //          ->see('languages')
+    //          ->click('Start Course')
+    //          ->seePageIs('/courses/phone')
+    //          ->click('Edit')
+    //          ->seePageIs('/courses/1/edit');
+    // }
+
+    /**
+     * Test Course can be deleted
+     *
+     * @return void
+     */
+    public function testOnlyLoggedUserCanDeleteCourse()
+    {
+        $response = $this->call('DELETE', '/course/1/delete');
+
+        $this->assertEquals(500, $response->status());
     }
 }

@@ -7,21 +7,9 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class SearchTest extends TestCase
 {
     /**
-     * Test  courses
-     */
-    // public function testSearchCoursesPageHasRightContent()
-    // {
-    //     $this->visit('/search')
-    //          ->see('Search Results')
-    //          ->dontSee('log Out');
-
-    //     $this->assertViewHas('courses');
-    // }
-
-    /**
      * Check page loads.
      * */
-    public function testSearchCoursesLoadsCorrectly()
+    public function testSearchRouteLoadsCorrectly()
     {
         Session::start();
         $credentials = [
@@ -29,11 +17,19 @@ class SearchTest extends TestCase
             'search' => 'languages',
         ];
 
-        $response = $this->call('POST', 'search', $credentials);
+       $this->call('POST', 'search', $credentials);
+    }
 
-        //$this->assertResponseOk();
-        //$this->assertEquals('Search Results ' . $credentials['search'], $response->getContent());
-        // $this->visit('/')
-        //      ->submitForm('search', ['_token' => csrf_token(), 'search' => 'a']);
+    /**
+     * Check page loads.
+     * */
+    public function testEmptySearchRouteLoadsCorrectly()
+    {
+        $credentials = [
+            '_token' => csrf_token(),
+            'search' => '',
+        ];
+
+       $this->call('POST', 'search', $credentials);
     }
 }

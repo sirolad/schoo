@@ -63,6 +63,4 @@ class UploadCourseTest extends TestCase
         $this->actingAs($user);
         $this->call('GET', '/dashboard');
     }
-
-
 }
