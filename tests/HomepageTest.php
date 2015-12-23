@@ -93,6 +93,7 @@ class HomepageTest extends TestCase
         $response = $this->call('GET', '/something');
         $this->assertEquals(404, $response->getStatusCode());
     }
+
     /**
      * Test  courses
      */
