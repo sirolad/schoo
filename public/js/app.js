@@ -9,7 +9,7 @@ $(document).ready(function() {
   $.material.init();
 
   // delete action button
-  $('.delete').on('click', function(){
+  $('#delete').on('click', function(){
     var token = $(this).attr('data-token');
     var id = $(this).attr('data-id');
     var URL = "/courses/"+id+"/delete";
@@ -18,6 +18,7 @@ $(document).ready(function() {
         id : id
     }];
     alertMethod(URL, data);
+    return false;
   });
 
 // toggle on dashboard button

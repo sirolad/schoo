@@ -36,7 +36,7 @@
         @can('owner-can-see', $course)
         <div class="btn-group">
           <a href="/courses/{{ $course->id }}/edit" class="btn btn-raised btn-info">Edit</a>
-          <a class="btn btn-raised btn-danger delete" data-id="{{ $course->id }}">Delete <i class="fa fa-trash-o"></i></a>
+          <a href="/courses/{{ $course->id }}/delete" class="btn btn-raised btn-danger" data-id="{{ $course->id }}" id="delete">delete <i class="fa fa-trash-o"></i></a>
         </div>
         @endcan
       </div>
