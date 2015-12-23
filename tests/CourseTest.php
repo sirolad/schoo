@@ -151,23 +151,6 @@ class CourseTest extends TestCase
     }
 
     /**
-     * Test that Course can be viewed
-     */
-    // public function testThatCoursesCanbeEditedByCreator()
-    // {
-    //     $this->loginAUser();
-    //     $this->createCourse();
-
-    //     $this->visit('/dashboard')
-    //          ->see('phone')
-    //          ->see('languages')
-    //          ->click('Start Course')
-    //          ->seePageIs('/courses/phone')
-    //          ->click('Edit')
-    //          ->seePageIs('/courses/1/edit');
-    // }
-
-    /**
      * Test Course delete route
      *
      * @return void
