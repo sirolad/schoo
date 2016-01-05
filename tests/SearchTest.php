@@ -17,7 +17,7 @@ class SearchTest extends TestCase
             'search' => 'languages',
         ];
 
-       $this->call('POST', 'search', $credentials);
+        $this->call('POST', 'search', $credentials);
     }
 
     /**
@@ -30,6 +30,6 @@ class SearchTest extends TestCase
             'search' => '',
         ];
 
-       $this->call('POST', 'search', $credentials);
+        $this->call('POST', 'search', $credentials);
     }
 }
