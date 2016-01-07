@@ -40,7 +40,7 @@ class CourseTest extends TestCase
     }
 
     /**
-     * [loginAUser description]
+     * Login a user
      * @return [type] [description]
      */
     public function loginAUser()
