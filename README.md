@@ -7,7 +7,7 @@
 [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/andela-sakande/PotatoORM/blob/master/LICENSE)
 
 School is an Awesome Simple Learning Management System which enable individuals to share stuffs easily
-thereby making everyone better by learning from wonderful people on an easy-to-use platform.
+thereby making everyone better by learning from wonderful people on an easy-to-use platform.Visit [School demo page](https://schoo.herokuapp.com/) to view the project demo.
 
 ## Usage
 
@@ -51,7 +51,6 @@ Now you are set up and ready to run.
 
 * Other interesting features to be added soon
 
-Visit [School demo page](https://schoo.herokuapp.com/) to view the project demo.
 
 ## Change log
 
