@@ -165,7 +165,7 @@ class AuthController extends Controller
               'provider'    => $provider,
               'uid'         => $theUser->id,
               'avatar_url'  => $theUser->avatar,
-          ]);
+            ]);
         }
 
         return User::create([
@@ -174,6 +174,6 @@ class AuthController extends Controller
           'provider'   => $provider,
           'uid'        => $theUser->id,
           'avatar_url' => $theUser->avatar,
-      ]);
+        ]);
     }
 }
